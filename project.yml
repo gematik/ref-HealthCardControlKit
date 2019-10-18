@@ -1,0 +1,96 @@
+name: HealthCardControlKit
+options:
+  bundleIdPrefix: de.gematik.ti.healthcardcontrol
+  deploymentTarget:
+    macOS: 10.12
+    iOS: 12.1
+settings:
+  base:
+    SWIFT_VERSION: 5.0
+    ALWAYS_SEARCH_USER_PATHS: NO
+    FRAMEWORK_SEARCH_PATHS: "$(inherited)"
+  configs:
+    Release:
+      SWIFT_COMPILATION_MODE: wholemodule
+    Debug:
+      SWIFT_COMPILATION_MODE: incremental
+targets:
+  HealthCardControlKit:
+    type: framework
+    platform: [iOS,macOS]
+    info:
+      path: DerivedData/HealthCardControlKit/Info.plist
+    sources:
+      - path: Sources
+        excludes:
+          - "BigIntExt"
+    dependencies:
+      - target: BigIntExt_${platform}
+      - carthage: HealthCardAccessKit
+      - carthage: CardReaderProviderApi
+      - carthage: CardReaderAccess
+      - carthage: GemCommonsKit
+      - carthage: ASN1Kit
+      - carthage: DataKit
+      - carthage: BigInt
+    scheme:
+      testTargets:
+        - HealthCardControlKitTests_${platform}
+      gatherCoverageData: true
+  HealthCardControlKitTests:
+    name: HealthCardControlKitTests_${platform}
+    type: bundle.unit-test
+    platform: [macOS,iOS]
+    sources:
+      - path: Tests
+        excludes:
+          - "HealthCardControlTests/Integration"
+          - "HealthCardControlTests/Util/CardSimulatorTerminalResource.swift"
+          - "HealthCardControlTests/Util/HCCTerminalTestCase.swift"
+    dependencies:
+    - target: HealthCardControlKit_${platform}
+    - carthage: HealthCardAccessKit
+    - carthage: CardReaderProviderApi
+    - carthage: CardReaderAccess
+    - carthage: Nimble
+    - carthage: DataKit
+    - carthage: BigInt
+  ### gematik_private_start
+  HealthCardControlKitIntegrationTests:
+    name: HealthCardControlKitIntegrationTests
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests/HealthCardControlTests/Integration
+      - Tests/HealthCardControlTests/Util
+      - Tests/HealthCardControlTests/Resources.bundle
+    dependencies:
+      - target: HealthCardControlKit_macOS
+      - target: BigIntExt_macOS
+      - carthage: HealthCardAccessKit
+      - carthage: CardReaderProviderApi
+      - carthage: CardReaderAccess
+      - carthage: CardSimulationLoader
+      - carthage: CardSimulationCardReaderProvider
+      - carthage: ObjCCommonsKit
+      - carthage: Nimble
+      - carthage: DataKit
+      - carthage: AEXML
+      - carthage: StreamReader
+      - carthage: SwiftSocket
+      - carthage: BigInt
+    scheme:
+      testTargets:
+        - HealthCardControlKitIntegrationTests
+      gatherCoverageData: true
+  ### gematik_private_end
+  BigIntExt:
+    type: framework
+    platform: [iOS,macOS]
+    info:
+      path: DerivedData/HealthCardControlKit/BigIntInfo.plist
+    sources:
+      - Sources/BigIntExt
+    dependencies:
+      - carthage: BigInt
+buildImplicitDependencies: true
