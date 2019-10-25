@@ -7,52 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01CCDDDF80F308C40D0546465F2A0779 /* KeyAgreementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCF8BFBB200451625AC6E40E899DBE /* KeyAgreementTest.swift */; };
 		073DA9007836ED7B0067865353ED06E6 /* CardReaderAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; };
 		076D2E994BA83277C7E5196E083EAA6E /* ASN1Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */; };
-		07DE455D962252011510DE2120C72B90 /* CardSimulationCardReaderProvider.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72812E274B31A1A61D691BB1D6B3E396 /* CardSimulationCardReaderProvider.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		08194F0A762835747ACF3DDD490577B0 /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; };
-		08C22DB574CAC2B8E8C38DA73CE40E58 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; };
 		0A93870B7EC555244D1B57D7685B8DFD /* HealthCardAccessKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDFDBE5DF38F65A902F32B82514F106E /* HealthCardAccessKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0BC579B6350CAFA3CD7EF2BEA0F36780 /* EcdhKeyPairGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD65D9B13C413FB6291A7AD9A23649 /* EcdhKeyPairGeneratorTest.swift */; };
-		124811257C5A3008F77CC322CE35F8E8 /* KeyAgreementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D2EF8A38014179EA7121F07E9FB2D5 /* KeyAgreementTest.swift */; };
+		12A82682C27B49AD4509349A4A8018D9 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BE49885366A22113FDC12E2045B94B0 /* Resources.bundle */; };
 		12DC1BC6B5C85EF5E24B6DA8DE6D3C90 /* EllipticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD43FF055315CA2FCDC4D103ABB5F1 /* EllipticCurve.swift */; };
 		13DB0BFD8C2AA74BFE602DA21F5084F5 /* GemCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F91E9888715C7FDD52EBDA8C2006743 /* GemCommonsKit.framework */; };
 		15D55D10319E1EF5EEBC744682438AB6 /* HealthCardControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC09AE02146F93FBF52B2A2A9DEA069B /* HealthCardControlKit.framework */; };
-		19406AFFB94F7399C60B1A9A492332F5 /* CardReaderAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A9F9841D45663D4F754A3CBDFADCFB5 /* Data+Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A953827EEB57CFB7F983DB7C69E78E /* Data+Secure.swift */; };
 		1B724D7549856350BEE6E7083F48D859 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; };
-		1E22202698BB4A6363C866FA2785C86C /* CardChannelTypeExtVersionIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61D6906DBCE3FAC2A027EC7C8975021 /* CardChannelTypeExtVersionIntegrationTest.swift */; };
-		221BAA4E74830F1E24C298248E5298CC /* DataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		234C6413A04CD8D6AC9C0F2D489D32DC /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23A17997E654F02FC0D07C14A275725C /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC46D0A6F5AB2DB1F9BBA508DCAF0CE /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		26082259E0C6DB5972346263F2F7C40A /* AEXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA6B6F32D82BC03DF025424603E51C /* AEXML.framework */; };
+		25F5511FC18F008F94FE06989F8C8EA0 /* ResponseType+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BDC8ADF1D5824722D63AC31F9A49 /* ResponseType+Bytes.swift */; };
 		2A68D6B4CFD65DF325718FB0A83F0431 /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; };
 		2E3E473CC11C53B7C37AB1811092E149 /* SecureCardChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB82A626B8C24E04169BB9FBC55866 /* SecureCardChannel.swift */; };
 		2E56EFE4145E7C9F901665135F12EA9D /* EllipticCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CD43FF055315CA2FCDC4D103ABB5F1 /* EllipticCurve.swift */; };
-		343BE87939AD30BF511E76E19B0B2503 /* StreamReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86680B9877B436F8992DE50154ED75A4 /* StreamReader.framework */; };
+		33D5C95CDDBF6757BB106AA0C3C42826 /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BE49885366A22113FDC12E2045B94B0 /* Resources.bundle */; };
+		358761623B3EE5943F43E29BBD6EF001 /* ResponseType+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BDC8ADF1D5824722D63AC31F9A49 /* ResponseType+Bytes.swift */; };
 		368E68C98148D9584AEC9FE048FAB9CE /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */; };
 		36D88DE6B65E38B6E6FF8F43BAB9FCE7 /* HealthCardAccessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFDBE5DF38F65A902F32B82514F106E /* HealthCardAccessKit.framework */; };
-		37261B512B3E18920A437DFC954DF7BC /* ASN1Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		371C6175DDAF2DB9F53EF50FC20EE179 /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31938CCD5DEB220569FA012C2068A21 /* AESTests.swift */; };
+		382E51CF0CA6E0335A7FE130C10153ED /* ECPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1ADB384F3D0ACE4C844F411F46EC4 /* ECPointTest.swift */; };
 		38DC6C164A55A40457742A32D42C8CB2 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; };
-		3C85A3ADA9033103426F83AC6CA28E0C /* KeyAgreementIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC82FC09E534B0A9192877CE78CF900 /* KeyAgreementIntegrationTest.swift */; };
 		3DC95A9D1AC20DD4BF8AB16483444E2F /* KeyDerivationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D905E08720FEF4C7042E6A0552E10 /* KeyDerivationFunction.swift */; };
 		3ECBA5730BB8B7EE50731AEB04AA893C /* CardChannelType+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391135395A1CDEB35EA5E6220300244B /* CardChannelType+Version.swift */; };
-		40AE4425EE38F34CCFF566E42985B8A2 /* ObjCCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862C3C72D23F90432D4CD358F165983 /* ObjCCommonsKit.framework */; };
-		4384DD5CE6D61C3F99A594AFEDF9EBD2 /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; };
-		476957D0F570BF2B2BE9B6B4C58BB88B /* KeyDerivationFunctionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38BC0BAEE072BD48FAD15CC5D235C6 /* KeyDerivationFunctionTest.swift */; };
 		496200680885798723458EF7C09370DE /* SecureCardChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33EB82A626B8C24E04169BB9FBC55866 /* SecureCardChannel.swift */; };
-		49B2BFDA00F957D894F807D38A1D5AF2 /* HealthCardControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E685F86D48314A60B0354879E61031A8 /* HealthCardControlKit.framework */; };
 		4CA183E977DFB927E1A95B51C456515F /* AES128PaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8743B902A8560D98E97842687D367A /* AES128PaceKey.swift */; };
 		5045F0F80EAB68F01EFC8457A841613A /* CardType+SecureMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48B1F61D59C2B666C834E6634BF051F /* CardType+SecureMessaging.swift */; };
-		5218EA422361EC8B81CED3ECF90CBFC2 /* ECPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA0E0B9005E756C68FD497B4AAED44 /* ECPointTest.swift */; };
-		52ABCC6D55DA7AD5965B502B29982847 /* HealthCardAccessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */; };
-		5587FBF3D2997081688460942AFF6AAA /* HealthCardAccessKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		516BF59EEC23F1441E3CFA1EB78F9F10 /* KeyAgreementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3FCF8BFBB200451625AC6E40E899DBE /* KeyAgreementTest.swift */; };
+		55164B580D8A8CE37826739474C03E87 /* ECPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E1ADB384F3D0ACE4C844F411F46EC4 /* ECPointTest.swift */; };
 		5893E218CFD94CF8931EBC2E17DD60EA /* CardReaderAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A219F42F6BBFDDBB24FC18CCDB65E2D /* ASN1Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5AA2152E2B27CC787639095D5EF993CB /* EcdhKeyPairGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D33C69B26F7C8EA1C9C3426C5D9915 /* EcdhKeyPairGeneratorTest.swift */; };
 		5D295ACB5C7CD67C5B006E3EAC90C9ED /* CardReaderProviderApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		5E008916CA7D9436D4761FFE6321A912 /* CardSimulationLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03247B905EA927AB800E8D01B0327C3F /* CardSimulationLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E649341A31FFFC4571735031BB55B02 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74061A0878FBBAA716AF077ED46ED756 /* DataKit.framework */; };
 		5E8FAC819B1865C491A00E3016D248FC /* BigInt+DataConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2F06C3A8AD91D44AE074E85378FA3 /* BigInt+DataConversion.swift */; };
+		60A0F34AF84519099AA965868C80F46F /* EllipticCurveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457683815EE96DE1B8A3941DCB30FE43 /* EllipticCurveTest.swift */; };
 		63656EB3C58C5FBC0751B0CBD72E9B67 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; };
 		641EB3EC50D177429A7CBB9FBB24E7F4 /* HealthCardControlKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E685F86D48314A60B0354879E61031A8 /* HealthCardControlKit.framework */; };
 		6A12F78F4D74A7F47BEBCB41F94A4649 /* CardReaderProviderApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6759349C4ADA031E8936527842A8C0 /* CardReaderProviderApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -60,90 +52,61 @@
 		6A414300F1C43848311DBD0783CBFC9A /* SecureHealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D84FE78EB38F9FD5851072FBC70CE /* SecureHealthCard.swift */; };
 		6B101542C3E6A21EE3759D0B21663D21 /* HealthCardType+EfCardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B6D9D3C840D2C61D5D72C2FA873510 /* HealthCardType+EfCardAccess.swift */; };
 		6F604909FEEB428DFD7B12A97118E21B /* GemCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3F91E9888715C7FDD52EBDA8C2006743 /* GemCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		70C6CC548412280B60A8F7DA3CED77FF /* AEXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 49DA6B6F32D82BC03DF025424603E51C /* AEXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		716E25E3C64FBA64D6F22EA7D6E82ECE /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C0EDE9A19109F1BA230EDAB305F485 /* AESTests.swift */; };
 		72AFD53FC1E8C33ED1324020A3A30695 /* SecureHealthCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6D84FE78EB38F9FD5851072FBC70CE /* SecureHealthCard.swift */; };
 		757841B511D9F9229105B0101F01F2C7 /* ASN1Kit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45CE014CFF6429D48A17521221CFF557 /* ASN1Kit.framework */; };
 		795F18005B7D5839C3A6F0E13BAE19E9 /* CardReaderAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B2B14A0AF0B7AC5E19C371D9AB79B290 /* CardReaderAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7B7570FA1166A61422ED74E4AF34B7D8 /* KeyDerivationFunctionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E38BC0BAEE072BD48FAD15CC5D235C6 /* KeyDerivationFunctionTest.swift */; };
 		7BB76816B56B79E8E53B101BB8B512AA /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6759349C4ADA031E8936527842A8C0 /* CardReaderProviderApi.framework */; };
 		7C13AD08978F35538E107457B48461B6 /* EcdhKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2306D7A4C68D35933DE9E8B4318DB /* EcdhKeyPair.swift */; };
-		7C7DA2AEC85CFAE2726BD4F2A44EBFDA /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 931280FE352196E97C202A55FBA2BD70 /* Resources.bundle */; };
-		80325D8745B694B21E0AA92124445CAC /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 931280FE352196E97C202A55FBA2BD70 /* Resources.bundle */; };
 		8270944B81BB1C674030D8E17C0D74BD /* HealthCardAccessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */; };
 		8392524B152992B52C2654ED8B1178C7 /* HealthCardAccessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */; };
-		885ED28AF8A8BEFD417CF50B2B3977C3 /* StreamReader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 86680B9877B436F8992DE50154ED75A4 /* StreamReader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		88830E69B164174184FB74A46D81571A /* KeyAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E16542DDD08B2975BB17F9EFA75D5A /* KeyAgreement.swift */; };
-		89D4A1B38FD5553D13895B442855FBA7 /* GemCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0BACCA5BCE62FF66DF8D743B0A1BD /* GemCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		8A333F6AC57A3A8A4F5BDC6CBF0E7C53 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF48C5B615CBD2D729E25BFEF179D4 /* XCTestManifests.swift */; };
-		8FAA25DE49533797FE0A639FD334FB56 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; };
 		90A89A67495A067CD218DDBC5C203D05 /* HealthCardType+EfCardAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B6D9D3C840D2C61D5D72C2FA873510 /* HealthCardType+EfCardAccess.swift */; };
 		9108C57A066A95A8ACF646AEA442A092 /* DataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 74061A0878FBBAA716AF077ED46ED756 /* DataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		91D814AC428AC30521DE53E6FB0FDCE2 /* HealthCardTypeExtEfCardAccessIntTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136610B860D074BDDD19AA7C3599BB6A /* HealthCardTypeExtEfCardAccessIntTest.swift */; };
+		91A9620FE760A519344C360A97862288 /* AES128PaceKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D6A1C5A069643684D7E50E03147E6 /* AES128PaceKeyTest.swift */; };
 		91DD841A329E2326387AA9235E1AAC6C /* EcdhKeyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A2306D7A4C68D35933DE9E8B4318DB /* EcdhKeyPair.swift */; };
 		927DAE434C998C457999EC3DE0F77A89 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; };
-		93238A7F729586B541D169374E3E1D4A /* EcdhKeyPairGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACD65D9B13C413FB6291A7AD9A23649 /* EcdhKeyPairGeneratorTest.swift */; };
-		94F6BF391F8DF42EA4ED51A5D1F5FF4F /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06C0EDE9A19109F1BA230EDAB305F485 /* AESTests.swift */; };
 		986582421909B8149EDA48EDF117391D /* HealthCardControlKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC09AE02146F93FBF52B2A2A9DEA069B /* HealthCardControlKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9972052E5E7E3F4E1EB34316DDBFF3FF /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C6759349C4ADA031E8936527842A8C0 /* CardReaderProviderApi.framework */; };
-		9A892D7D7F2A34A31EA51B44EC5641A3 /* HealthCardControlKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E685F86D48314A60B0354879E61031A8 /* HealthCardControlKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9B498FB4A4A98C27F609EF8A683F88B3 /* AES128PaceKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C3EC7663607291EBCB74986BE613 /* AES128PaceKeyTest.swift */; };
+		9A9D9D71673FFBCDDE15755DF8593790 /* EcdhKeyPairGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D33C69B26F7C8EA1C9C3426C5D9915 /* EcdhKeyPairGeneratorTest.swift */; };
 		9CEC2DE301E95AA088C815071F196353 /* ECPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194E366725CFABE47D541047F631C1D /* ECPoint.swift */; };
 		A13300F4081A6E455FD31FD65F7070EA /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6521A4F84E1186293EF978E7A0A3FEDB /* BigInt.framework */; };
 		A1869168C8C2C75BA85A295AD75AF079 /* EcdhKeyPairGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9625D92526BDAAB47EC21B1EEE3E14 /* EcdhKeyPairGenerator.swift */; };
 		A3B0EE26BD66774900B7B2137C10AED5 /* SecureMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB1F34574BFA367394CB321233C48A3 /* SecureMessaging.swift */; };
 		A563B60EA9812EBA89324742105D65D5 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6521A4F84E1186293EF978E7A0A3FEDB /* BigInt.framework */; };
-		A57EE8E240A77A132F9A87762E7FC219 /* CardReaderProviderApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A6FF029C34DE71C569CBBC8740716A39 /* BigIntExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46862E71523FBD994EB2CEB818A149 /* BigIntExt.framework */; };
-		A82847EDB709B223377782829B198485 /* ResponseType+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174453644E8564CE588AF5454A25A68 /* ResponseType+Bytes.swift */; };
-		A89C843570CB009375E421D29808A1D1 /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A71FA6DA1DA5199592A2A8AD48EBB0AF /* AESTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31938CCD5DEB220569FA012C2068A21 /* AESTests.swift */; };
+		A7CAAC785901B65A8E1677FE4EA94E6F /* AES128PaceKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D6A1C5A069643684D7E50E03147E6 /* AES128PaceKeyTest.swift */; };
 		A8A10D10257D7665D35ED5F5C18B120A /* Data+Secure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A953827EEB57CFB7F983DB7C69E78E /* Data+Secure.swift */; };
-		A8E67E8CDF12E6ED34E377278548BD9A /* DataSecureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321E709B9F61162CB390DE271066693 /* DataSecureTest.swift */; };
 		AA1B75400301687C087F7E1F6C3C5933 /* BigIntExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF2F7D9F64A7838AA1602E66306031A /* BigIntExt.framework */; };
 		AC94F45DB5AF7FEEB6F42EFB80F4D548 /* HealthCardControlKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E685F86D48314A60B0354879E61031A8 /* HealthCardControlKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AD95B93D3F967BA27DECA7F8416AAAA3 /* CardReaderAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B14A0AF0B7AC5E19C371D9AB79B290 /* CardReaderAccess.framework */; };
-		AF1B1A08A19BB1466FED1504C4F44ABD /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */; };
+		AEE2385D5F8FA9308DE60C52B7CBEC87 /* DataSecureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63084913AFAD6EF2004BCD0F78A290 /* DataSecureTest.swift */; };
 		B2BD3D489ABA489066BF448062A8D5C0 /* ECPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194E366725CFABE47D541047F631C1D /* ECPoint.swift */; };
 		B365E05746357ED0030C3E6BB2AACD28 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546DF03F8BF0DEA67B167B1B92E503CB /* AES.swift */; };
-		B3BC96B66EA7A6A20A3F996225F9E7CE /* BigIntExt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB46862E71523FBD994EB2CEB818A149 /* BigIntExt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		B459A340DE9598B26C3BEBBB6C0ECCF6 /* AES128PaceKeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB03C3EC7663607291EBCB74986BE613 /* AES128PaceKeyTest.swift */; };
 		B56DBA19436106BB47303AC9C0B5A291 /* GemCommonsKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0BACCA5BCE62FF66DF8D743B0A1BD /* GemCommonsKit.framework */; };
-		B59C30EA6050CA703E79300C0200BB49 /* HCCTerminalTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8031D6FCC0BB26C91F2E0D37462D5B3F /* HCCTerminalTestCase.swift */; };
 		B5FFC241ED578AA15A963F8A4F1ED615 /* GemCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4A0BACCA5BCE62FF66DF8D743B0A1BD /* GemCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B87460607F3A5F5B416E17CA6C9AE6C1 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6521A4F84E1186293EF978E7A0A3FEDB /* BigInt.framework */; };
+		BA0B3F626B2BF49112D0752FD70BB9FA /* KeyDerivationFunctionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C351779B9A99B591E0385ACBD28F8DD /* KeyDerivationFunctionTest.swift */; };
 		BA3CE30667F5536875FC5BBDF3D0DE51 /* EcdhKeyPairGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9625D92526BDAAB47EC21B1EEE3E14 /* EcdhKeyPairGenerator.swift */; };
 		BD34F7275C2D49416066CE3A8D4D1BD6 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546DF03F8BF0DEA67B167B1B92E503CB /* AES.swift */; };
-		BF61AA5FE4A0248E7317096402176C12 /* DataSecureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F321E709B9F61162CB390DE271066693 /* DataSecureTest.swift */; };
+		BF207BDD025443BC85F68D194F7FD422 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A5FCD711C16139D0AE245927920880 /* XCTestManifests.swift */; };
 		C040743D551EEABE66356B4AFEFC97D0 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC46D0A6F5AB2DB1F9BBA508DCAF0CE /* Nimble.framework */; };
-		C57991732472F80D7B6B1C326827C1A8 /* CardSimulatorTerminalResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A52496214344D563673C043BBE206B /* CardSimulatorTerminalResource.swift */; };
 		C5C024FA6BA11772F114EFF215523DE3 /* DataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C944CFB7D9E042B84627B46DDA3DCD28 /* CardChannelType+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391135395A1CDEB35EA5E6220300244B /* CardChannelType+Version.swift */; };
 		C9765CD677C8224C584EB9C09EADA55E /* AES128PaceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8743B902A8560D98E97842687D367A /* AES128PaceKey.swift */; };
-		CB752A016D273B3ABBE783A4FC4710D6 /* SwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA6759093C1C5172E8FB33665DF754B3 /* SwiftSocket.framework */; };
-		CBEE8AC348FC52E0C95BC5D07D588F76 /* BigIntExt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46862E71523FBD994EB2CEB818A149 /* BigIntExt.framework */; };
+		CBFC14304FE2D4441823B91584019538 /* DataSecureTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E63084913AFAD6EF2004BCD0F78A290 /* DataSecureTest.swift */; };
 		CE7308792AE063971D3299303BB56AA8 /* KeyDerivationFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025D905E08720FEF4C7042E6A0552E10 /* KeyDerivationFunction.swift */; };
-		D17CBA86105EB22AADB85F2B6C2B37F2 /* ObjCCommonsKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6862C3C72D23F90432D4CD358F165983 /* ObjCCommonsKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D230EBBAE3717AFE2E662D0C300A80B7 /* ECPointTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA0E0B9005E756C68FD497B4AAED44 /* ECPointTest.swift */; };
 		D43C4588456A490D82F2F2662974FCCB /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D44CA878B51C2F4759B58AFA22A33ADE /* HealthCardAccessKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D47F92C34EA6F09E30F89590509D9D4C /* CardReaderAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; };
 		D5230C9FA3A0607031F994735C7B6C03 /* ASN1Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 45CE014CFF6429D48A17521221CFF557 /* ASN1Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D527CC2911D40DBA3247DCC5CD70639F /* CardSimulationLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03247B905EA927AB800E8D01B0327C3F /* CardSimulationLoader.framework */; };
 		D66F1262E79B3AFA1249D5AA9AE3F9C0 /* BigInt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; };
-		D821A84324CCC005DB4D591599282747 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1BF48C5B615CBD2D729E25BFEF179D4 /* XCTestManifests.swift */; };
-		D8AEDC8D15433BDD3C2A6297E65FE2CF /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB6A2A5A9FF81E6979D7D5489EDA3F2F /* CardReaderAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2B14A0AF0B7AC5E19C371D9AB79B290 /* CardReaderAccess.framework */; };
-		DC4DC01F5D1468B2153145A8D25882AA /* ResponseType+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6174453644E8564CE588AF5454A25A68 /* ResponseType+Bytes.swift */; };
-		DCE1A32D4EB58DE79114E34C6F3ECEF9 /* SelectCommandIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F0D9CB74306DCEFD8E53234886EE44 /* SelectCommandIntegrationTest.swift */; };
-		DF37535B88C15B6FFD93CF63820B5140 /* EllipticCurveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA406E47654F26DB73D38294B4676E2C /* EllipticCurveTest.swift */; };
-		E072330D6321BA96AD5E5B8B1B7E037C /* Resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 931280FE352196E97C202A55FBA2BD70 /* Resources.bundle */; };
 		E25B89E70F28140E5C0DC6B510EB7B7C /* HealthCardAccessKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFDBE5DF38F65A902F32B82514F106E /* HealthCardAccessKit.framework */; };
-		E54B3F87F19BBBD80BA0828F9F2F4BD7 /* KeyAgreementTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D2EF8A38014179EA7121F07E9FB2D5 /* KeyAgreementTest.swift */; };
-		E719D8D304CB9D60ADA8426F663F84A2 /* SwiftSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA6759093C1C5172E8FB33665DF754B3 /* SwiftSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E7CE2BC4687DC12E028896CEB3A2FCD7 /* EllipticCurveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA406E47654F26DB73D38294B4676E2C /* EllipticCurveTest.swift */; };
+		E37B688D7913A5CC6DF46ABAF423CA0D /* KeyDerivationFunctionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C351779B9A99B591E0385ACBD28F8DD /* KeyDerivationFunctionTest.swift */; };
+		E7709D638F7BEC0416B2A0756CEA3DEB /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A5FCD711C16139D0AE245927920880 /* XCTestManifests.swift */; };
+		E892BFCA4D4A65522480A4C55C7B2262 /* EllipticCurveTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 457683815EE96DE1B8A3941DCB30FE43 /* EllipticCurveTest.swift */; };
 		EE1CAA767D5F955A2DE2922DD3C6AD26 /* KeyAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E16542DDD08B2975BB17F9EFA75D5A /* KeyAgreement.swift */; };
 		F204B26F56F7EE0C30D5E9D00B823FCC /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6521A4F84E1186293EF978E7A0A3FEDB /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F2C0BA8263E6B99ADF3E11CD8894FAF4 /* CardSimulationCardReaderProvider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72812E274B31A1A61D691BB1D6B3E396 /* CardSimulationCardReaderProvider.framework */; };
 		F40496B1AFD85AD935FD98773E9DD469 /* SecureMessaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB1F34574BFA367394CB321233C48A3 /* SecureMessaging.swift */; };
 		FB133A55080EC7E415EC6C41C1AA5FC0 /* CardReaderAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; };
 		FB5BA7501B8064BE8F06415ECE6D6C8A /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74061A0878FBBAA716AF077ED46ED756 /* DataKit.framework */; };
@@ -164,20 +127,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = FACE2AB5FF64F9E80B85681B6F6B8686;
 			remoteInfo = BigIntExt_iOS;
-		};
-		8110A3C6D52E460B19225233F8D666CB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1967BA3B4D85E51880E660CCF0F0576B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F28C7C304F8FEC2A540D26FBC9FC7CBA;
-			remoteInfo = HealthCardControlKit_macOS;
-		};
-		CCDCAFB5B2E396ADB2533DD6E37FCF00 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1967BA3B4D85E51880E660CCF0F0576B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0E3DC3955CBC351B672D473F5481949E;
-			remoteInfo = BigIntExt_macOS;
 		};
 		F2936CA11ABAA7C33FF528CA0E8F2611 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -234,82 +183,44 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CBD694273EF09A775C3599E87B10707 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				9A892D7D7F2A34A31EA51B44EC5641A3 /* HealthCardControlKit.framework in Embed Frameworks */,
-				B3BC96B66EA7A6A20A3F996225F9E7CE /* BigIntExt.framework in Embed Frameworks */,
-				70C6CC548412280B60A8F7DA3CED77FF /* AEXML.framework in Embed Frameworks */,
-				37261B512B3E18920A437DFC954DF7BC /* ASN1Kit.framework in Embed Frameworks */,
-				D8AEDC8D15433BDD3C2A6297E65FE2CF /* BigInt.framework in Embed Frameworks */,
-				19406AFFB94F7399C60B1A9A492332F5 /* CardReaderAccess.framework in Embed Frameworks */,
-				A57EE8E240A77A132F9A87762E7FC219 /* CardReaderProviderApi.framework in Embed Frameworks */,
-				07DE455D962252011510DE2120C72B90 /* CardSimulationCardReaderProvider.framework in Embed Frameworks */,
-				5E008916CA7D9436D4761FFE6321A912 /* CardSimulationLoader.framework in Embed Frameworks */,
-				221BAA4E74830F1E24C298248E5298CC /* DataKit.framework in Embed Frameworks */,
-				89D4A1B38FD5553D13895B442855FBA7 /* GemCommonsKit.framework in Embed Frameworks */,
-				5587FBF3D2997081688460942AFF6AAA /* HealthCardAccessKit.framework in Embed Frameworks */,
-				A89C843570CB009375E421D29808A1D1 /* Nimble.framework in Embed Frameworks */,
-				D17CBA86105EB22AADB85F2B6C2B37F2 /* ObjCCommonsKit.framework in Embed Frameworks */,
-				885ED28AF8A8BEFD417CF50B2B3977C3 /* StreamReader.framework in Embed Frameworks */,
-				E719D8D304CB9D60ADA8426F663F84A2 /* SwiftSocket.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		025D905E08720FEF4C7042E6A0552E10 /* KeyDerivationFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationFunction.swift; sourceTree = "<group>"; };
-		03247B905EA927AB800E8D01B0327C3F /* CardSimulationLoader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardSimulationLoader.framework; sourceTree = "<group>"; };
 		03B6D9D3C840D2C61D5D72C2FA873510 /* HealthCardType+EfCardAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthCardType+EfCardAccess.swift"; sourceTree = "<group>"; };
-		06C0EDE9A19109F1BA230EDAB305F485 /* AESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESTests.swift; sourceTree = "<group>"; };
 		0CB1F34574BFA367394CB321233C48A3 /* SecureMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureMessaging.swift; sourceTree = "<group>"; };
-		136610B860D074BDDD19AA7C3599BB6A /* HealthCardTypeExtEfCardAccessIntTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthCardTypeExtEfCardAccessIntTest.swift; sourceTree = "<group>"; };
+		1C351779B9A99B591E0385ACBD28F8DD /* KeyDerivationFunctionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationFunctionTest.swift; sourceTree = "<group>"; };
 		33EB82A626B8C24E04169BB9FBC55866 /* SecureCardChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureCardChannel.swift; sourceTree = "<group>"; };
 		38F2F06C3A8AD91D44AE074E85378FA3 /* BigInt+DataConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+DataConversion.swift"; sourceTree = "<group>"; };
 		391135395A1CDEB35EA5E6220300244B /* CardChannelType+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardChannelType+Version.swift"; sourceTree = "<group>"; };
 		3CF2F7D9F64A7838AA1602E66306031A /* BigIntExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigIntExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8743B902A8560D98E97842687D367A /* AES128PaceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES128PaceKey.swift; sourceTree = "<group>"; };
 		3F91E9888715C7FDD52EBDA8C2006743 /* GemCommonsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GemCommonsKit.framework; sourceTree = "<group>"; };
+		457683815EE96DE1B8A3941DCB30FE43 /* EllipticCurveTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveTest.swift; sourceTree = "<group>"; };
 		45CE014CFF6429D48A17521221CFF557 /* ASN1Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASN1Kit.framework; sourceTree = "<group>"; };
-		46D2EF8A38014179EA7121F07E9FB2D5 /* KeyAgreementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAgreementTest.swift; sourceTree = "<group>"; };
-		49DA6B6F32D82BC03DF025424603E51C /* AEXML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AEXML.framework; sourceTree = "<group>"; };
-		49F0D9CB74306DCEFD8E53234886EE44 /* SelectCommandIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCommandIntegrationTest.swift; sourceTree = "<group>"; };
 		4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardReaderAccess.framework; sourceTree = "<group>"; };
 		50CD43FF055315CA2FCDC4D103ABB5F1 /* EllipticCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurve.swift; sourceTree = "<group>"; };
+		51E1ADB384F3D0ACE4C844F411F46EC4 /* ECPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPointTest.swift; sourceTree = "<group>"; };
 		546DF03F8BF0DEA67B167B1B92E503CB /* AES.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES.swift; sourceTree = "<group>"; };
+		5BE49885366A22113FDC12E2045B94B0 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		5E63084913AFAD6EF2004BCD0F78A290 /* DataSecureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSecureTest.swift; sourceTree = "<group>"; };
 		6113FE854647159C9D20AAEA2BECFFD2 /* HealthCardControlKitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HealthCardControlKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6174453644E8564CE588AF5454A25A68 /* ResponseType+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseType+Bytes.swift"; sourceTree = "<group>"; };
 		6521A4F84E1186293EF978E7A0A3FEDB /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
-		6862C3C72D23F90432D4CD358F165983 /* ObjCCommonsKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjCCommonsKit.framework; sourceTree = "<group>"; };
-		69AA0E0B9005E756C68FD497B4AAED44 /* ECPointTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECPointTest.swift; sourceTree = "<group>"; };
 		6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
-		72812E274B31A1A61D691BB1D6B3E396 /* CardSimulationCardReaderProvider.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardSimulationCardReaderProvider.framework; sourceTree = "<group>"; };
 		74061A0878FBBAA716AF077ED46ED756 /* DataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataKit.framework; sourceTree = "<group>"; };
 		7C6759349C4ADA031E8936527842A8C0 /* CardReaderProviderApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardReaderProviderApi.framework; sourceTree = "<group>"; };
 		7DA7C4075A79093A2E62D6EB64E203CB /* HealthCardControlKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCardControlKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC46D0A6F5AB2DB1F9BBA508DCAF0CE /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Nimble.framework; sourceTree = "<group>"; };
-		8031D6FCC0BB26C91F2E0D37462D5B3F /* HCCTerminalTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HCCTerminalTestCase.swift; sourceTree = "<group>"; };
 		828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HealthCardAccessKit.framework; sourceTree = "<group>"; };
-		86680B9877B436F8992DE50154ED75A4 /* StreamReader.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StreamReader.framework; sourceTree = "<group>"; };
+		88A5FCD711C16139D0AE245927920880 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		88A953827EEB57CFB7F983DB7C69E78E /* Data+Secure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Secure.swift"; sourceTree = "<group>"; };
-		931280FE352196E97C202A55FBA2BD70 /* Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resources.bundle; sourceTree = "<group>"; };
+		929D6A1C5A069643684D7E50E03147E6 /* AES128PaceKeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES128PaceKeyTest.swift; sourceTree = "<group>"; };
 		9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ASN1Kit.framework; sourceTree = "<group>"; };
-		9E38BC0BAEE072BD48FAD15CC5D235C6 /* KeyDerivationFunctionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationFunctionTest.swift; sourceTree = "<group>"; };
-		A61D6906DBCE3FAC2A027EC7C8975021 /* CardChannelTypeExtVersionIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardChannelTypeExtVersionIntegrationTest.swift; sourceTree = "<group>"; };
-		A8A52496214344D563673C043BBE206B /* CardSimulatorTerminalResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSimulatorTerminalResource.swift; sourceTree = "<group>"; };
+		A3D33C69B26F7C8EA1C9C3426C5D9915 /* EcdhKeyPairGeneratorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcdhKeyPairGeneratorTest.swift; sourceTree = "<group>"; };
 		B2B14A0AF0B7AC5E19C371D9AB79B290 /* CardReaderAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardReaderAccess.framework; sourceTree = "<group>"; };
 		B48B1F61D59C2B666C834E6634BF051F /* CardType+SecureMessaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CardType+SecureMessaging.swift"; sourceTree = "<group>"; };
-		B7B481D15283BC39472B206A67A9C803 /* HealthCardControlKitIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthCardControlKitIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BA406E47654F26DB73D38294B4676E2C /* EllipticCurveTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EllipticCurveTest.swift; sourceTree = "<group>"; };
-		BA6759093C1C5172E8FB33665DF754B3 /* SwiftSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SwiftSocket.framework; sourceTree = "<group>"; };
 		BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CardReaderProviderApi.framework; sourceTree = "<group>"; };
 		BDFDBE5DF38F65A902F32B82514F106E /* HealthCardAccessKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HealthCardAccessKit.framework; sourceTree = "<group>"; };
-		C1BF48C5B615CBD2D729E25BFEF179D4 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DataKit.framework; sourceTree = "<group>"; };
 		CB46862E71523FBD994EB2CEB818A149 /* BigIntExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigIntExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6D84FE78EB38F9FD5851072FBC70CE /* SecureHealthCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureHealthCard.swift; sourceTree = "<group>"; };
@@ -321,10 +232,9 @@
 		E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BigInt.framework; sourceTree = "<group>"; };
 		E9A2306D7A4C68D35933DE9E8B4318DB /* EcdhKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcdhKeyPair.swift; sourceTree = "<group>"; };
 		EA9625D92526BDAAB47EC21B1EEE3E14 /* EcdhKeyPairGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcdhKeyPairGenerator.swift; sourceTree = "<group>"; };
-		EB03C3EC7663607291EBCB74986BE613 /* AES128PaceKeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES128PaceKeyTest.swift; sourceTree = "<group>"; };
-		F321E709B9F61162CB390DE271066693 /* DataSecureTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSecureTest.swift; sourceTree = "<group>"; };
-		FACD65D9B13C413FB6291A7AD9A23649 /* EcdhKeyPairGeneratorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcdhKeyPairGeneratorTest.swift; sourceTree = "<group>"; };
-		FFC82FC09E534B0A9192877CE78CF900 /* KeyAgreementIntegrationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAgreementIntegrationTest.swift; sourceTree = "<group>"; };
+		F31938CCD5DEB220569FA012C2068A21 /* AESTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AESTests.swift; sourceTree = "<group>"; };
+		F3FCF8BFBB200451625AC6E40E899DBE /* KeyAgreementTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAgreementTest.swift; sourceTree = "<group>"; };
+		F561BDC8ADF1D5824722D63AC31F9A49 /* ResponseType+Bytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResponseType+Bytes.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,27 +312,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4E370340396BCB3A0099DACC49B4113 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				49B2BFDA00F957D894F807D38A1D5AF2 /* HealthCardControlKit.framework in Frameworks */,
-				CBEE8AC348FC52E0C95BC5D07D588F76 /* BigIntExt.framework in Frameworks */,
-				52ABCC6D55DA7AD5965B502B29982847 /* HealthCardAccessKit.framework in Frameworks */,
-				4384DD5CE6D61C3F99A594AFEDF9EBD2 /* CardReaderProviderApi.framework in Frameworks */,
-				D47F92C34EA6F09E30F89590509D9D4C /* CardReaderAccess.framework in Frameworks */,
-				D527CC2911D40DBA3247DCC5CD70639F /* CardSimulationLoader.framework in Frameworks */,
-				F2C0BA8263E6B99ADF3E11CD8894FAF4 /* CardSimulationCardReaderProvider.framework in Frameworks */,
-				40AE4425EE38F34CCFF566E42985B8A2 /* ObjCCommonsKit.framework in Frameworks */,
-				AF1B1A08A19BB1466FED1504C4F44ABD /* Nimble.framework in Frameworks */,
-				08C22DB574CAC2B8E8C38DA73CE40E58 /* DataKit.framework in Frameworks */,
-				26082259E0C6DB5972346263F2F7C40A /* AEXML.framework in Frameworks */,
-				343BE87939AD30BF511E76E19B0B2503 /* StreamReader.framework in Frameworks */,
-				CB752A016D273B3ABBE783A4FC4710D6 /* SwiftSocket.framework in Frameworks */,
-				8FAA25DE49533797FE0A639FD334FB56 /* BigInt.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -432,6 +321,17 @@
 				391135395A1CDEB35EA5E6220300244B /* CardChannelType+Version.swift */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		1CC1141B660ADEA0DEB90D9E94F5192C /* SecureMessaging */ = {
+			isa = PBXGroup;
+			children = (
+				929D6A1C5A069643684D7E50E03147E6 /* AES128PaceKeyTest.swift */,
+				A3D33C69B26F7C8EA1C9C3426C5D9915 /* EcdhKeyPairGeneratorTest.swift */,
+				F3FCF8BFBB200451625AC6E40E899DBE /* KeyAgreementTest.swift */,
+				F561BDC8ADF1D5824722D63AC31F9A49 /* ResponseType+Bytes.swift */,
+			);
+			path = SecureMessaging;
 			sourceTree = "<group>";
 		};
 		2DBF0F450C1B527953CCC9496ACAD7DA /* iOS */ = {
@@ -459,16 +359,15 @@
 			path = Carthage/Build;
 			sourceTree = "<group>";
 		};
-		35B4D6F2B1E7F45CCDDFE21F489777FA /* Crypto */ = {
+		307D85C100745F12CE67E2B162B7E436 /* HealthCardControlTests */ = {
 			isa = PBXGroup;
 			children = (
-				06C0EDE9A19109F1BA230EDAB305F485 /* AESTests.swift */,
-				F321E709B9F61162CB390DE271066693 /* DataSecureTest.swift */,
-				69AA0E0B9005E756C68FD497B4AAED44 /* ECPointTest.swift */,
-				BA406E47654F26DB73D38294B4676E2C /* EllipticCurveTest.swift */,
-				9E38BC0BAEE072BD48FAD15CC5D235C6 /* KeyDerivationFunctionTest.swift */,
+				5BE49885366A22113FDC12E2045B94B0 /* Resources.bundle */,
+				88A5FCD711C16139D0AE245927920880 /* XCTestManifests.swift */,
+				87921337E809C44C9A48FA34FDB7766B /* Crypto */,
+				1CC1141B660ADEA0DEB90D9E94F5192C /* SecureMessaging */,
 			);
-			path = Crypto;
+			path = HealthCardControlTests;
 			sourceTree = "<group>";
 		};
 		372086CE706DD0E6E8E2DD94A0D4AE21 /* Sources */ = {
@@ -477,18 +376,6 @@
 				ADD45A634C95F99CCD1A543401AC6082 /* HealthCardControl */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		53A47621F9CC336F4DE9BC320B19D6BE /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-				A61D6906DBCE3FAC2A027EC7C8975021 /* CardChannelTypeExtVersionIntegrationTest.swift */,
-				136610B860D074BDDD19AA7C3599BB6A /* HealthCardTypeExtEfCardAccessIntTest.swift */,
-				FFC82FC09E534B0A9192877CE78CF900 /* KeyAgreementIntegrationTest.swift */,
-				49F0D9CB74306DCEFD8E53234886EE44 /* SelectCommandIntegrationTest.swift */,
-			);
-			name = Integration;
-			path = Tests/HealthCardControlTests/Integration;
 			sourceTree = "<group>";
 		};
 		7B3D7595172D4FD9F3E285C32ADC4FB9 /* Frameworks */ = {
@@ -503,30 +390,29 @@
 			isa = PBXGroup;
 			children = (
 				F4CCB415F16F1DFD46590E808B4A7852 /* BigIntExt */,
-				E5D84B04AAE849E97DB3D74BA18069F3 /* HealthCardControlTests */,
-				53A47621F9CC336F4DE9BC320B19D6BE /* Integration */,
 				372086CE706DD0E6E8E2DD94A0D4AE21 /* Sources */,
 				9640AE6B2A1943E4C0D6B589221796B2 /* Tests */,
-				836E0969079E6A7CE35E70262564D84D /* Util */,
 				7B3D7595172D4FD9F3E285C32ADC4FB9 /* Frameworks */,
 				F45E6E0E6954655016D371385288EA75 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		836E0969079E6A7CE35E70262564D84D /* Util */ = {
+		87921337E809C44C9A48FA34FDB7766B /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
-				A8A52496214344D563673C043BBE206B /* CardSimulatorTerminalResource.swift */,
-				8031D6FCC0BB26C91F2E0D37462D5B3F /* HCCTerminalTestCase.swift */,
+				F31938CCD5DEB220569FA012C2068A21 /* AESTests.swift */,
+				5E63084913AFAD6EF2004BCD0F78A290 /* DataSecureTest.swift */,
+				51E1ADB384F3D0ACE4C844F411F46EC4 /* ECPointTest.swift */,
+				457683815EE96DE1B8A3941DCB30FE43 /* EllipticCurveTest.swift */,
+				1C351779B9A99B591E0385ACBD28F8DD /* KeyDerivationFunctionTest.swift */,
 			);
-			name = Util;
-			path = Tests/HealthCardControlTests/Util;
+			path = Crypto;
 			sourceTree = "<group>";
 		};
 		9640AE6B2A1943E4C0D6B589221796B2 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				E5D84B04AAE849E97DB3D74BA18069F3 /* HealthCardControlTests */,
+				307D85C100745F12CE67E2B162B7E436 /* HealthCardControlTests */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -541,34 +427,17 @@
 			path = HealthCardControl;
 			sourceTree = "<group>";
 		};
-		B1DC7848EB891864803DCBC5775DE53C /* SecureMessaging */ = {
-			isa = PBXGroup;
-			children = (
-				EB03C3EC7663607291EBCB74986BE613 /* AES128PaceKeyTest.swift */,
-				FACD65D9B13C413FB6291A7AD9A23649 /* EcdhKeyPairGeneratorTest.swift */,
-				46D2EF8A38014179EA7121F07E9FB2D5 /* KeyAgreementTest.swift */,
-				6174453644E8564CE588AF5454A25A68 /* ResponseType+Bytes.swift */,
-			);
-			path = SecureMessaging;
-			sourceTree = "<group>";
-		};
 		BDA77194AD2E5B9C5992F6252ADE5CF3 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				49DA6B6F32D82BC03DF025424603E51C /* AEXML.framework */,
 				9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */,
 				E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */,
 				4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */,
 				BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */,
-				72812E274B31A1A61D691BB1D6B3E396 /* CardSimulationCardReaderProvider.framework */,
-				03247B905EA927AB800E8D01B0327C3F /* CardSimulationLoader.framework */,
 				C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */,
 				E4A0BACCA5BCE62FF66DF8D743B0A1BD /* GemCommonsKit.framework */,
 				828CC75F179F87A8E3A102DF6BEF2B8E /* HealthCardAccessKit.framework */,
 				6B6E2886E01B24D67EE309B80ADC36F7 /* Nimble.framework */,
-				6862C3C72D23F90432D4CD358F165983 /* ObjCCommonsKit.framework */,
-				86680B9877B436F8992DE50154ED75A4 /* StreamReader.framework */,
-				BA6759093C1C5172E8FB33665DF754B3 /* SwiftSocket.framework */,
 			);
 			path = Mac;
 			sourceTree = "<group>";
@@ -601,18 +470,6 @@
 			path = SecureMessaging;
 			sourceTree = "<group>";
 		};
-		E5D84B04AAE849E97DB3D74BA18069F3 /* HealthCardControlTests */ = {
-			isa = PBXGroup;
-			children = (
-				931280FE352196E97C202A55FBA2BD70 /* Resources.bundle */,
-				C1BF48C5B615CBD2D729E25BFEF179D4 /* XCTestManifests.swift */,
-				35B4D6F2B1E7F45CCDDFE21F489777FA /* Crypto */,
-				B1DC7848EB891864803DCBC5775DE53C /* SecureMessaging */,
-			);
-			name = HealthCardControlTests;
-			path = Tests/HealthCardControlTests;
-			sourceTree = "<group>";
-		};
 		F45E6E0E6954655016D371385288EA75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,7 +477,6 @@
 				CB46862E71523FBD994EB2CEB818A149 /* BigIntExt.framework */,
 				DC09AE02146F93FBF52B2A2A9DEA069B /* HealthCardControlKit.framework */,
 				E685F86D48314A60B0354879E61031A8 /* HealthCardControlKit.framework */,
-				B7B481D15283BC39472B206A67A9C803 /* HealthCardControlKitIntegrationTests.xctest */,
 				6113FE854647159C9D20AAEA2BECFFD2 /* HealthCardControlKitTests.xctest */,
 				7DA7C4075A79093A2E62D6EB64E203CB /* HealthCardControlKitTests.xctest */,
 			);
@@ -691,26 +547,6 @@
 			productReference = DC09AE02146F93FBF52B2A2A9DEA069B /* HealthCardControlKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AFED90FDED2078F5F5DD9272543B6DE0 /* HealthCardControlKitIntegrationTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C202F22D2580F2D38B2371DB9FA69FCC /* Build configuration list for PBXNativeTarget "HealthCardControlKitIntegrationTests" */;
-			buildPhases = (
-				A75DB657641676F147874DFF5AC16B1A /* Sources */,
-				2507AD58637AB0F610C5F9AD71ACB1A8 /* Resources */,
-				E4E370340396BCB3A0099DACC49B4113 /* Frameworks */,
-				8CBD694273EF09A775C3599E87B10707 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				38392E7CF9D873544A1861F13BAD453C /* PBXTargetDependency */,
-				9D6203F6F1F2498DC5C8353283BE7380 /* PBXTargetDependency */,
-			);
-			name = HealthCardControlKitIntegrationTests;
-			productName = HealthCardControlKitIntegrationTests;
-			productReference = B7B481D15283BC39472B206A67A9C803 /* HealthCardControlKitIntegrationTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		CE7D374ED713B4441D9E7F704B57934B /* HealthCardControlKitTests_macOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D263A7B283E4BC45789862D7E620FBC7 /* Build configuration list for PBXNativeTarget "HealthCardControlKitTests_macOS" */;
@@ -770,6 +606,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
+				TargetAttributes = {
+					0DC4BD368E497229FE99435B5289B851 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					0E3DC3955CBC351B672D473F5481949E = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					4BEE84822B3D84214F491B0802B57E27 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					CE7D374ED713B4441D9E7F704B57934B = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					F28C7C304F8FEC2A540D26FBC9FC7CBA = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+					FACE2AB5FF64F9E80B85681B6F6B8686 = {
+						DevelopmentTeam = A9FL89PFFL;
+					};
+				};
 			};
 			buildConfigurationList = FE9660F04DC0828DB4CFF37C6EC53AC2 /* Build configuration list for PBXProject "HealthCardControlKit" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -784,7 +640,6 @@
 			targets = (
 				FACE2AB5FF64F9E80B85681B6F6B8686 /* BigIntExt_iOS */,
 				0E3DC3955CBC351B672D473F5481949E /* BigIntExt_macOS */,
-				AFED90FDED2078F5F5DD9272543B6DE0 /* HealthCardControlKitIntegrationTests */,
 				0DC4BD368E497229FE99435B5289B851 /* HealthCardControlKitTests_iOS */,
 				CE7D374ED713B4441D9E7F704B57934B /* HealthCardControlKitTests_macOS */,
 				4BEE84822B3D84214F491B0802B57E27 /* HealthCardControlKit_iOS */,
@@ -798,15 +653,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80325D8745B694B21E0AA92124445CAC /* Resources.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2507AD58637AB0F610C5F9AD71ACB1A8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E072330D6321BA96AD5E5B8B1B7E037C /* Resources.bundle in Resources */,
+				33D5C95CDDBF6757BB106AA0C3C42826 /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,7 +661,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C7DA2AEC85CFAE2726BD4F2A44EBFDA /* Resources.bundle in Resources */,
+				12A82682C27B49AD4509349A4A8018D9 /* Resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -833,16 +680,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B459A340DE9598B26C3BEBBB6C0ECCF6 /* AES128PaceKeyTest.swift in Sources */,
-				716E25E3C64FBA64D6F22EA7D6E82ECE /* AESTests.swift in Sources */,
-				A8E67E8CDF12E6ED34E377278548BD9A /* DataSecureTest.swift in Sources */,
-				5218EA422361EC8B81CED3ECF90CBFC2 /* ECPointTest.swift in Sources */,
-				0BC579B6350CAFA3CD7EF2BEA0F36780 /* EcdhKeyPairGeneratorTest.swift in Sources */,
-				DF37535B88C15B6FFD93CF63820B5140 /* EllipticCurveTest.swift in Sources */,
-				E54B3F87F19BBBD80BA0828F9F2F4BD7 /* KeyAgreementTest.swift in Sources */,
-				7B7570FA1166A61422ED74E4AF34B7D8 /* KeyDerivationFunctionTest.swift in Sources */,
-				A82847EDB709B223377782829B198485 /* ResponseType+Bytes.swift in Sources */,
-				D821A84324CCC005DB4D591599282747 /* XCTestManifests.swift in Sources */,
+				91A9620FE760A519344C360A97862288 /* AES128PaceKeyTest.swift in Sources */,
+				371C6175DDAF2DB9F53EF50FC20EE179 /* AESTests.swift in Sources */,
+				AEE2385D5F8FA9308DE60C52B7CBEC87 /* DataSecureTest.swift in Sources */,
+				382E51CF0CA6E0335A7FE130C10153ED /* ECPointTest.swift in Sources */,
+				9A9D9D71673FFBCDDE15755DF8593790 /* EcdhKeyPairGeneratorTest.swift in Sources */,
+				60A0F34AF84519099AA965868C80F46F /* EllipticCurveTest.swift in Sources */,
+				516BF59EEC23F1441E3CFA1EB78F9F10 /* KeyAgreementTest.swift in Sources */,
+				E37B688D7913A5CC6DF46ABAF423CA0D /* KeyDerivationFunctionTest.swift in Sources */,
+				358761623B3EE5943F43E29BBD6EF001 /* ResponseType+Bytes.swift in Sources */,
+				E7709D638F7BEC0416B2A0756CEA3DEB /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -850,16 +697,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B498FB4A4A98C27F609EF8A683F88B3 /* AES128PaceKeyTest.swift in Sources */,
-				94F6BF391F8DF42EA4ED51A5D1F5FF4F /* AESTests.swift in Sources */,
-				BF61AA5FE4A0248E7317096402176C12 /* DataSecureTest.swift in Sources */,
-				D230EBBAE3717AFE2E662D0C300A80B7 /* ECPointTest.swift in Sources */,
-				93238A7F729586B541D169374E3E1D4A /* EcdhKeyPairGeneratorTest.swift in Sources */,
-				E7CE2BC4687DC12E028896CEB3A2FCD7 /* EllipticCurveTest.swift in Sources */,
-				124811257C5A3008F77CC322CE35F8E8 /* KeyAgreementTest.swift in Sources */,
-				476957D0F570BF2B2BE9B6B4C58BB88B /* KeyDerivationFunctionTest.swift in Sources */,
-				DC4DC01F5D1468B2153145A8D25882AA /* ResponseType+Bytes.swift in Sources */,
-				8A333F6AC57A3A8A4F5BDC6CBF0E7C53 /* XCTestManifests.swift in Sources */,
+				A7CAAC785901B65A8E1677FE4EA94E6F /* AES128PaceKeyTest.swift in Sources */,
+				A71FA6DA1DA5199592A2A8AD48EBB0AF /* AESTests.swift in Sources */,
+				CBFC14304FE2D4441823B91584019538 /* DataSecureTest.swift in Sources */,
+				55164B580D8A8CE37826739474C03E87 /* ECPointTest.swift in Sources */,
+				5AA2152E2B27CC787639095D5EF993CB /* EcdhKeyPairGeneratorTest.swift in Sources */,
+				E892BFCA4D4A65522480A4C55C7B2262 /* EllipticCurveTest.swift in Sources */,
+				01CCDDDF80F308C40D0546465F2A0779 /* KeyAgreementTest.swift in Sources */,
+				BA0B3F626B2BF49112D0752FD70BB9FA /* KeyDerivationFunctionTest.swift in Sources */,
+				25F5511FC18F008F94FE06989F8C8EA0 /* ResponseType+Bytes.swift in Sources */,
+				BF207BDD025443BC85F68D194F7FD422 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,19 +729,6 @@
 				2E3E473CC11C53B7C37AB1811092E149 /* SecureCardChannel.swift in Sources */,
 				6A414300F1C43848311DBD0783CBFC9A /* SecureHealthCard.swift in Sources */,
 				F40496B1AFD85AD935FD98773E9DD469 /* SecureMessaging.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A75DB657641676F147874DFF5AC16B1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1E22202698BB4A6363C866FA2785C86C /* CardChannelTypeExtVersionIntegrationTest.swift in Sources */,
-				C57991732472F80D7B6B1C326827C1A8 /* CardSimulatorTerminalResource.swift in Sources */,
-				B59C30EA6050CA703E79300C0200BB49 /* HCCTerminalTestCase.swift in Sources */,
-				91D814AC428AC30521DE53E6FB0FDCE2 /* HealthCardTypeExtEfCardAccessIntTest.swift in Sources */,
-				3C85A3ADA9033103426F83AC6CA28E0C /* KeyAgreementIntegrationTest.swift in Sources */,
-				DCE1A32D4EB58DE79114E34C6F3ECEF9 /* SelectCommandIntegrationTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,20 +770,10 @@
 			target = 0E3DC3955CBC351B672D473F5481949E /* BigIntExt_macOS */;
 			targetProxy = FBDB642D7231C5BDDFC47608644ED3AE /* PBXContainerItemProxy */;
 		};
-		38392E7CF9D873544A1861F13BAD453C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F28C7C304F8FEC2A540D26FBC9FC7CBA /* HealthCardControlKit_macOS */;
-			targetProxy = 8110A3C6D52E460B19225233F8D666CB /* PBXContainerItemProxy */;
-		};
 		5732609E3294ADADB2AE7C3F7881CDF2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F28C7C304F8FEC2A540D26FBC9FC7CBA /* HealthCardControlKit_macOS */;
 			targetProxy = F2936CA11ABAA7C33FF528CA0E8F2611 /* PBXContainerItemProxy */;
-		};
-		9D6203F6F1F2498DC5C8353283BE7380 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0E3DC3955CBC351B672D473F5481949E /* BigIntExt_macOS */;
-			targetProxy = CCDCAFB5B2E396ADB2533DD6E37FCF00 /* PBXContainerItemProxy */;
 		};
 		E0B81B1ED782671A14C03D211C9E7638 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -964,21 +788,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		139A094CB83149D9373BC569D164D758 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.healthcardcontrol.HealthCardControlKitIntegrationTests;
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
 		2C2CA12871A53EC3F32C780D8CA59154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -992,7 +801,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DerivedData/HealthCardControlKit/BigIntInfo.plist;
+				INFOPLIST_FILE = DerivedData/BigIntExt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.healthcardcontrol.BigIntExt-iOS";
@@ -1017,7 +826,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = DerivedData/HealthCardControlKit/BigIntInfo.plist;
+				INFOPLIST_FILE = DerivedData/BigIntExt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.healthcardcontrol.BigIntExt-iOS";
@@ -1076,8 +885,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1111,21 +922,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.healthcardcontrol.HealthCardControlKitTests-macOS";
 				PRODUCT_NAME = HealthCardControlKitTests;
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		54BA76E0919D1A9360F10204D0418736 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = de.gematik.ti.healthcardcontrol.HealthCardControlKitIntegrationTests;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -1169,7 +965,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = DerivedData/HealthCardControlKit/BigIntInfo.plist;
+				INFOPLIST_FILE = DerivedData/BigIntExt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.healthcardcontrol.BigIntExt-macOS";
@@ -1301,7 +1097,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				INFOPLIST_FILE = DerivedData/HealthCardControlKit/BigIntInfo.plist;
+				INFOPLIST_FILE = DerivedData/BigIntExt/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "de.gematik.ti.healthcardcontrol.BigIntExt-macOS";
@@ -1343,8 +1139,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1418,15 +1216,6 @@
 			buildConfigurations = (
 				AEE00596986EF171348F44B2485A6521 /* Debug */,
 				6B0EA55CE85F0BB6D225DA986B251885 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = "";
-		};
-		C202F22D2580F2D38B2371DB9FA69FCC /* Build configuration list for PBXNativeTarget "HealthCardControlKitIntegrationTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				139A094CB83149D9373BC569D164D758 /* Debug */,
-				54BA76E0919D1A9360F10204D0418736 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "";

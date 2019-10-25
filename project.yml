@@ -6,6 +6,8 @@ options:
     iOS: 12.1
 settings:
   base:
+    DEVELOPMENT_TEAM: A9FL89PFFL
+    CODE_SIGN_IDENTITY: ""
     SWIFT_VERSION: 5.0
     ALWAYS_SEARCH_USER_PATHS: NO
     FRAMEWORK_SEARCH_PATHS: "$(inherited)"
@@ -55,40 +57,11 @@ targets:
     - carthage: Nimble
     - carthage: DataKit
     - carthage: BigInt
-  ### gematik_private_start
-  HealthCardControlKitIntegrationTests:
-    name: HealthCardControlKitIntegrationTests
-    type: bundle.unit-test
-    platform: macOS
-    sources:
-      - Tests/HealthCardControlTests/Integration
-      - Tests/HealthCardControlTests/Util
-      - Tests/HealthCardControlTests/Resources.bundle
-    dependencies:
-      - target: HealthCardControlKit_macOS
-      - target: BigIntExt_macOS
-      - carthage: HealthCardAccessKit
-      - carthage: CardReaderProviderApi
-      - carthage: CardReaderAccess
-      - carthage: CardSimulationLoader
-      - carthage: CardSimulationCardReaderProvider
-      - carthage: ObjCCommonsKit
-      - carthage: Nimble
-      - carthage: DataKit
-      - carthage: AEXML
-      - carthage: StreamReader
-      - carthage: SwiftSocket
-      - carthage: BigInt
-    scheme:
-      testTargets:
-        - HealthCardControlKitIntegrationTests
-      gatherCoverageData: true
-  ### gematik_private_end
   BigIntExt:
     type: framework
     platform: [iOS,macOS]
     info:
-      path: DerivedData/HealthCardControlKit/BigIntInfo.plist
+      path: DerivedData/BigIntExt/Info.plist
     sources:
       - Sources/BigIntExt
     dependencies:

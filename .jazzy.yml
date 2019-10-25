@@ -8,5 +8,3 @@ theme: jony
 xcodebuild_arguments:
   - "-project"
   - 'HealthCardControlKit.xcodeproj'
-  - "-scheme"
-  - 'HealthCardControlKit_macOS'
