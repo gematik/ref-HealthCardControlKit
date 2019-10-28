@@ -23,9 +23,7 @@ targets:
     info:
       path: DerivedData/HealthCardControlKit/Info.plist
     sources:
-      - path: Sources
-        excludes:
-          - "BigIntExt"
+      - path: Sources/HealthCardControl
     dependencies:
       - target: BigIntExt_${platform}
       - carthage: HealthCardAccessKit
@@ -38,6 +36,19 @@ targets:
     scheme:
       testTargets:
         - HealthCardControlKitTests_${platform}
+      gatherCoverageData: true
+  BigIntExt:
+    type: framework
+    platform: [iOS,macOS]
+    info:
+      path: DerivedData/BigIntExt/Info.plist
+    sources:
+      - Sources/BigIntExt
+    dependencies:
+      - carthage: BigInt
+    scheme:
+      testTargets:
+        - BigIntExtTests_${platform}
       gatherCoverageData: true
   HealthCardControlKitTests:
     name: HealthCardControlKitTests_${platform}
@@ -57,13 +68,11 @@ targets:
     - carthage: Nimble
     - carthage: DataKit
     - carthage: BigInt
-  BigIntExt:
-    type: framework
-    platform: [iOS,macOS]
-    info:
-      path: DerivedData/BigIntExt/Info.plist
+  BigIntExtTests:
+    type: bundle.unit-test
+    platform: [macOS,iOS]
     sources:
-      - Sources/BigIntExt
+      - path: Tests/BigIntExtTests
     dependencies:
       - carthage: BigInt
 buildImplicitDependencies: true

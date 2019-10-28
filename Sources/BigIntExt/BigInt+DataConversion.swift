@@ -1,10 +1,12 @@
+/// This extension is copied from the pull request "Added support to serialize/deserialize BigInt in a manner similar
+/// to BigUInt" Therefore:
+/// Copyright © 2016-2017 Károly Lőrentey.
+/// https://github.com/attaswift/BigInt/pull/61
+/// Once the pull request is accepted into the framework, this class and its target has to be deleted.
+
 import BigInt
 import Foundation
 
-/// This extension is copied from the pull request "Added support to serialize/deserialize BigInt in a manner similar
-/// to BigUInt"
-/// https://github.com/attaswift/BigInt/pull/61
-/// Once the pull request is accepted into the framework, this class and its target has to be deleted.
 extension BigInt {
 
     /// Initialize a BigInt from bytes accessed from an UnsafeRawBufferPointer,
