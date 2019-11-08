@@ -13,15 +13,16 @@
 //  See the License for the specific language governing permissions and
 //  limitations under the License.
 //
+
 import CardReaderProviderApi
 import Foundation
 
 extension ResponseType {
     var bytes: Data {
         if let data = self.data {
-            return Data(bytes: data + [self.sw1] + [self.sw2])
+            return Data(data + [self.sw1, self.sw2])
         } else {
-            return Data(bytes: [self.sw1] + [self.sw2])
+            return Data([self.sw1, self.sw2])
         }
     }
 }

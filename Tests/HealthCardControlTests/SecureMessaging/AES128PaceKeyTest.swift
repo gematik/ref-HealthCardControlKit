@@ -22,8 +22,8 @@ import XCTest
 final class AES128PaceKeyTest: XCTestCase {
 
     func testPaceKey_init() {
-        let enc = Data(bytes: [0x0, 0x01, 0x02, 0x3])
-        let mac = Data(bytes: [0x03, 0x02, 0x01, 0x0])
+        let enc = Data([0x0, 0x01, 0x02, 0x3])
+        let mac = Data([0x03, 0x02, 0x01, 0x0])
         let paceKey = AES128PaceKey(enc: enc, mac: mac)
 
         expect {
@@ -226,12 +226,12 @@ final class AES128PaceKeyTest: XCTestCase {
 
     func testIncrementSsc() {
         expect {
-            AES128PaceKey.incrementSsc(ssc: Data(bytes: [0x0, 0x0, 0x0, 0x1]))
-        } == Data(bytes: [0x0, 0x0, 0x0, 0x2])
+            AES128PaceKey.incrementSsc(ssc: Data([0x0, 0x0, 0x0, 0x1]))
+        } == Data([0x0, 0x0, 0x0, 0x2])
 
         expect {
-            AES128PaceKey.incrementSsc(ssc: Data(bytes: [0x0, 0x0, 0x1, 0xFF]))
-        } == Data(bytes: [0x0, 0x0, 0x2, 0x00])
+            AES128PaceKey.incrementSsc(ssc: Data([0x0, 0x0, 0x1, 0xFF]))
+        } == Data([0x0, 0x0, 0x2, 0x00])
     }
 
     static let allTests = [

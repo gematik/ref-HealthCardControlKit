@@ -27,23 +27,9 @@ enum CardAid: ApplicationIdentifier {
     /// 5.3.8 MF / EF.Version2 (eGK)
     /// 5.3.5 MF / EF.Version2 (HBA)
     /// - Note: for all three the shortFileIdentifier is the same
-    var sfi: ShortFileIdentifier {
+    var efVersion2Sfi: ShortFileIdentifier {
         // swiftlint:disable:next force_unwrapping
         return EgkFileSystem.EF.version2.sfid!
-    }
-
-    func from(version: CardVersion2) throws -> HealthCardPropertyType {
-        guard let generation = version.generation() else {
-            throw HealthCard.Error.illegalGeneration(version: version)
-        }
-        switch self {
-        case .egk:
-            return .egk(generation: generation)
-        case .hba:
-            return .hba(generation: generation)
-        case .smcb:
-            return .smcb(generation: generation)
-        }
     }
 }
 
@@ -51,6 +37,22 @@ extension HealthCard {
     public enum Error: Swift.Error {
         case unknownCardType(aid: ApplicationIdentifier?)
         case illegalGeneration(version: CardVersion2)
+    }
+}
+
+extension HealthCardPropertyType {
+    static func from(cardAid: CardAid, cardVersion2: CardVersion2) throws -> HealthCardPropertyType {
+        guard let generation = cardVersion2.generation() else {
+            throw HealthCard.Error.illegalGeneration(version: cardVersion2)
+        }
+        switch cardAid {
+        case .egk:
+            return .egk(generation: generation)
+        case .hba:
+            return .hba(generation: generation)
+        case .smcb:
+            return .smcb(generation: generation)
+        }
     }
 }
 
@@ -63,7 +65,8 @@ extension CardChannelType {
         return APDU.expectedLengthWildcardShort
     }
 
-    /// Read EF.Version2 and determine `HealthCardPropertyType`
+    /// Determine `HealthCardPropertyType` either by known initialApplicationIdentifier of the `CardType`
+    /// or trying to read EF.Version2.
     /// - Parameters:
     ///     - writeTimeout: interval in seconds
     ///     - readTimeout: interval in seconds
@@ -71,31 +74,47 @@ extension CardChannelType {
     public func readCardType(writeTimeout: TimeInterval = 30.0, readTimeout: TimeInterval = 30.0)
                     -> Executable<HealthCardPropertyType> {
         let channel = self
-        return Executable<HealthCardCommand>
+
+        return Executable<ApplicationIdentifier>
                 .evaluate {
-                    try HealthCardCommand.Select.selectRootRequestingFcp(expectedLength: channel.expectedLengthWildcard)
+                    try channel.card.initialApplicationIdentifier()
                 }
-                .flatMap {
-                    $0.execute(on: self, writeTimeout: writeTimeout, readTimeout: readTimeout)
-                }
-                .map {
-                    let fcp = try FileControlParameter.parse(data: $0.data ?? Data.empty)
-                    guard let aid = fcp.applicationIdentifier else {
-                        throw HealthCard.Error.unknownCardType(aid: nil)
+                .flatMap { (initialApplicationIdentifierData: Data?) in
+                    if let aidData = initialApplicationIdentifierData {
+                        return Executable<ApplicationIdentifier>.evaluate {
+                            try ApplicationIdentifier(aidData)
+                        }
+                    } else {
+                        return Executable<HealthCardCommand>
+                                .evaluate {
+                                    try HealthCardCommand.Select
+                                            .selectRootRequestingFcp(expectedLength: channel.expectedLengthWildcard)
+                                }
+                                .flatMap {
+                                    $0.execute(on: channel, writeTimeout: writeTimeout, readTimeout: readTimeout)
+                                }
+                                .map {
+                                    let fcp = try FileControlParameter.parse(data: $0.data ?? Data.empty)
+                                    guard let aid = fcp.applicationIdentifier else {
+                                        throw HealthCard.Error.unknownCardType(aid: nil)
+                                    }
+                                    return aid
+                                }
                     }
-                    guard let card = CardAid(rawValue: aid) else {
+                }
+                .map { (aid: ApplicationIdentifier) in
+                    guard let cardAid = CardAid(rawValue: aid) else {
                         throw HealthCard.Error.unknownCardType(aid: aid)
                     }
-                    return card
+                    return cardAid
                 }
                 .flatMap { (cardAid: CardAid) in
-                    return try HealthCardCommand.Read.readFileCommand(
-                                    with: cardAid.sfi,
-                                    ne: channel.expectedLengthWildcard
-                            )
+                    try HealthCardCommand.Read.readFileCommand(with: cardAid.efVersion2Sfi,
+                                                               ne: channel.expectedLengthWildcard)
                             .execute(on: channel, writeTimeout: writeTimeout, readTimeout: readTimeout)
                             .map { response in
-                                try cardAid.from(version: CardVersion2(data: response.data ?? Data.empty))
+                                let cardVersion2 = try CardVersion2(data: response.data ?? Data.empty)
+                                return try HealthCardPropertyType.from(cardAid: cardAid, cardVersion2: cardVersion2)
                             }
                 }
     }

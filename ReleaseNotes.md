@@ -1,3 +1,6 @@
+# Release 1.0.4
+- try to detect HealthCardType by reading the initialApplicationIdentifier from CardType object if available
+
 # Release 1.0.3
 added a new test target
 

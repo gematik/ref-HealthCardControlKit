@@ -96,41 +96,43 @@ private let CCAESCmac: CCAESCmacT? = getFunc(libCommonCrypto, functionName: "CCA
 private let CCAESCmacOutputSize: Int = 16 /* CC_CMACAES_OUTPUT_LENGTH from CommonCMACSPI.h */
 
 @inline(__always)
-private func withUnsafePointers<A0, A1, A2, R>(
+private func withUnsafePointers<R>(
         _ arg0: Data,
         _ arg1: Data,
         _ arg2: inout Data,
         _ body: (
-                UnsafePointer<A0>,
-                UnsafePointer<A1>,
-                UnsafeMutablePointer<A2>) throws -> R
+                UnsafeRawPointer,
+                UnsafeRawPointer,
+                UnsafeMutableRawPointer) throws -> R
 ) rethrows -> R {
     return try arg0.withUnsafeBytes { param0 in
         return try arg1.withUnsafeBytes { param1 in
             return try arg2.withUnsafeMutableBytes { param2 in
-                return try body(param0, param1, param2)
+                //swiftlint:disable:next force_unwrapping
+                return try body(param0.baseAddress!, param1.baseAddress!, param2.baseAddress!)
             }
         }
     }
 }
 
 @inline(__always)
-private func withUnsafePointers<A0, A1, A2, A3, R>(
+private func withUnsafePointers<R>(
         _ arg0: Data,
         _ arg1: Data,
         _ arg2: Data,
         _ arg3: inout Data,
         _ body: (
-                UnsafePointer<A0>,
-                UnsafePointer<A1>,
-                UnsafePointer<A2>,
-                UnsafeMutablePointer<A3>) throws -> R
+                UnsafeRawPointer,
+                UnsafeRawPointer,
+                UnsafeRawPointer,
+                UnsafeMutableRawPointer) throws -> R
 ) rethrows -> R {
     return try arg0.withUnsafeBytes { param0 in
         return try arg1.withUnsafeBytes { param1 in
             return try arg2.withUnsafeBytes { param2 in
                 return try arg3.withUnsafeMutableBytes { param3 in
-                    return try body(param0, param1, param2, param3)
+                    //swiftlint:disable:next force_unwrapping
+                    return try body(param0.baseAddress!, param1.baseAddress!, param2.baseAddress!, param3.baseAddress!)
                 }
             }
         }

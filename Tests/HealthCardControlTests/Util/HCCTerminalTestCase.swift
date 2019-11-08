@@ -77,19 +77,12 @@ open class HCCTerminalTestCase: XCTestCase {
         reader = HCCTerminalTestCase.terminalResource.reader
         do {
             try connectCard()
-            try createHealthCard()
         } catch let error {
             preconditionFailure("CardTerminal could not connect card [\(error)]")
         }
     }
 
     override open class func tearDown() {
-        do {
-            try self.disconnectCard()
-        } catch let error {
-            ALog("Could not disconnect card: \(error)")
-        }
-
         terminalResource.shutDown()
 
         RunLoop.current.run(mode: .default, before: Date(timeIntervalSinceNow: 3))
@@ -101,9 +94,19 @@ open class HCCTerminalTestCase: XCTestCase {
 
     override open func setUp() {
         super.setUp()
+        do {
+            try createHealthCard()
+        } catch let error {
+            ALog("Could not create HealthCard: \(error)")
+        }
     }
 
     override open func tearDown() {
+        do {
+            try disconnectCard()
+        } catch let error {
+            ALog("Could not disconnect card: \(error)")
+        }
         super.tearDown()
     }
 
@@ -112,12 +115,12 @@ open class HCCTerminalTestCase: XCTestCase {
         card = try reader.connect([:])
     }
 
-    open class func createHealthCard() throws {
-        healthCard = try HealthCard(card: card, status: self.healthCardStatus())
+    open func createHealthCard() throws {
+        Self.healthCard = try HealthCard(card: Self.card, status: Self.healthCardStatus())
     }
 
-    open class func disconnectCard() throws {
-        try card.disconnect(reset: true)
+    open func disconnectCard() throws {
+        try Self.card.disconnect(reset: true)
     }
 #endif
 }

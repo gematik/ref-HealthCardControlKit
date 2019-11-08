@@ -48,10 +48,12 @@ class AES128PaceKey: SecureMessaging {
 
     func encrypt(command: CommandType) throws -> CommandType {
         secureMessagingSsc = AES128PaceKey.incrementSsc(ssc: secureMessagingSsc)
-        let encryptedMessage = try AES128PaceKey.encrypt(command: command,
-                                                         enc: self.enc,
-                                                         mac: self.mac,
-                                                         ssc: self.secureMessagingSsc)
+        let encryptedMessage = try AES128PaceKey.encrypt(
+                command: command,
+                enc: self.enc,
+                mac: self.mac,
+                ssc: self.secureMessagingSsc
+        )
         secureMessagingSsc = AES128PaceKey.incrementSsc(ssc: secureMessagingSsc)
         return encryptedMessage
     }
@@ -76,7 +78,7 @@ class AES128PaceKey: SecureMessaging {
             throw Error.apduAlreadyEncrypted
         }
 
-        var header = Data(bytes: [command.cla] + [command.ins] + [command.p1] + [command.p2])
+        var header = Data([command.cla, command.ins, command.p1, command.p2])
 
         let dataObject: Data
         if let data = command.data {
@@ -94,13 +96,13 @@ class AES128PaceKey: SecureMessaging {
         if let le = command.ne { //swiftlint:disable:this identifier_name
             let leValue: Data
             if le == 0x100 {
-                leValue = Data(bytes: [0x0])
+                leValue = Data([0x0])
             } else if le == 0x10000 {
-                leValue = Data(bytes: [0x0, 0x0])
+                leValue = Data([0x0, 0x0])
             } else if le > 0x100 {
-                leValue = Data(bytes: [UInt8(le >> 8) & 0xff, UInt8(le & 0xff)])
+                leValue = Data([UInt8(le >> 8) & 0xff, UInt8(le & 0xff)])
             } else {
-                leValue = Data(bytes: [UInt8(le & 0xff)])
+                leValue = Data([UInt8(le & 0xff)])
             }
             lengthObject = try create(tag: .taggedTag(0x17), data: .primitive(leValue)).serialize()
         } else {
@@ -132,11 +134,11 @@ class AES128PaceKey: SecureMessaging {
                 APDU.expectedLengthWildcardShort
 
         return try APDU.Command(cla: header[0],
-                                ins: header[1],
-                                p1: header[2],
-                                p2: header[3],
-                                data: secureData,
-                                ne: setLe)
+                ins: header[1],
+                p1: header[2],
+                p2: header[3],
+                data: secureData,
+                ne: setLe)
     }
 
     private static func decrypt(response: ResponseType, enc: Data, mac: Data, ssc: Data) throws -> ResponseType {
@@ -203,7 +205,7 @@ class AES128PaceKey: SecureMessaging {
         }
 
         let tempResult = unpaddedDataDecrypted + statusBytes
-        return try APDU.Response(apdu: Data(bytes: tempResult))
+        return try APDU.Response(apdu: Data(tempResult))
     }
 
     private static func calculateMac(key: Data, ssc: Data, macIn: Data) throws -> Data {

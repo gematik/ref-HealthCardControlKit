@@ -20,6 +20,7 @@
 		1B724D7549856350BEE6E7083F48D859 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C81ADBCA1359549848E514D1BBB610E2 /* DataKit.framework */; };
 		234C6413A04CD8D6AC9C0F2D489D32DC /* BigInt.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9670887B1E61223E22651B00FCFFFA4 /* BigInt.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		23A17997E654F02FC0D07C14A275725C /* Nimble.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC46D0A6F5AB2DB1F9BBA508DCAF0CE /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		24A3BAABC69F64569F21FF2673670DBD /* HealthCardType+ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954AB302E9838D0B37FA521E4F6FA64 /* HealthCardType+ReadFile.swift */; };
 		25F5511FC18F008F94FE06989F8C8EA0 /* ResponseType+Bytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F561BDC8ADF1D5824722D63AC31F9A49 /* ResponseType+Bytes.swift */; };
 		2A68D6B4CFD65DF325718FB0A83F0431 /* CardReaderProviderApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; };
 		2FC7B2F8CD4C1D2288F3CB920F5C3693 /* ECPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5DB675A8A40F5F3030F6D5F843E6795 /* ECPoint.swift */; };
@@ -42,6 +43,7 @@
 		5893E218CFD94CF8931EBC2E17DD60EA /* CardReaderAccess.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4DCCDDE8E4D0CFBA21C914A33EBA0E6C /* CardReaderAccess.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5A219F42F6BBFDDBB24FC18CCDB65E2D /* ASN1Kit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D842F8F03F006E4A77A97E846ACEA19 /* ASN1Kit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5AA2152E2B27CC787639095D5EF993CB /* EcdhKeyPairGeneratorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3D33C69B26F7C8EA1C9C3426C5D9915 /* EcdhKeyPairGeneratorTest.swift */; };
+		5B4FD65AE930BAF63EDBD45021FF1952 /* HealthCardType+ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2954AB302E9838D0B37FA521E4F6FA64 /* HealthCardType+ReadFile.swift */; };
 		5D295ACB5C7CD67C5B006E3EAC90C9ED /* CardReaderProviderApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD337F8D00F5132D2C3023DE517D4C51 /* CardReaderProviderApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5E649341A31FFFC4571735031BB55B02 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74061A0878FBBAA716AF077ED46ED756 /* DataKit.framework */; };
 		5E8FAC819B1865C491A00E3016D248FC /* BigInt+DataConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38F2F06C3A8AD91D44AE074E85378FA3 /* BigInt+DataConversion.swift */; };
@@ -220,6 +222,7 @@
 		0A71E16FB2813E2DA5B9E4BB040B86F7 /* KeyAgreement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAgreement.swift; sourceTree = "<group>"; };
 		1C351779B9A99B591E0385ACBD28F8DD /* KeyDerivationFunctionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDerivationFunctionTest.swift; sourceTree = "<group>"; };
 		2382418E7EFF34EBF5CEBCA6A8FDDC83 /* Data+Secure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Secure.swift"; sourceTree = "<group>"; };
+		2954AB302E9838D0B37FA521E4F6FA64 /* HealthCardType+ReadFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HealthCardType+ReadFile.swift"; sourceTree = "<group>"; };
 		38F2F06C3A8AD91D44AE074E85378FA3 /* BigInt+DataConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigInt+DataConversion.swift"; sourceTree = "<group>"; };
 		39C9385A77429D6A6AE3AD9ADAA26740 /* EcdhKeyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EcdhKeyPair.swift; sourceTree = "<group>"; };
 		3CF2F7D9F64A7838AA1602E66306031A /* BigIntExt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BigIntExt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,6 +418,7 @@
 			isa = PBXGroup;
 			children = (
 				A5AAFAA34450A3AC6769F90FB419FCA3 /* CardChannelType+Version.swift */,
+				2954AB302E9838D0B37FA521E4F6FA64 /* HealthCardType+ReadFile.swift */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -695,32 +699,6 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1000;
-				TargetAttributes = {
-					0DC4BD368E497229FE99435B5289B851 = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					0E3DC3955CBC351B672D473F5481949E = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					49BC4E66BAF522787203240423298FFF = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					4BEE84822B3D84214F491B0802B57E27 = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					62F9995FBEB68E4BC80D33D92CAC13BC = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					CE7D374ED713B4441D9E7F704B57934B = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					F28C7C304F8FEC2A540D26FBC9FC7CBA = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-					FACE2AB5FF64F9E80B85681B6F6B8686 = {
-						DevelopmentTeam = A9FL89PFFL;
-					};
-				};
 			};
 			buildConfigurationList = FE9660F04DC0828DB4CFF37C6EC53AC2 /* Build configuration list for PBXProject "HealthCardControlKit" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -831,6 +809,7 @@
 				B50F767463E0DB94A941617BBB79389E /* EcdhKeyPairGenerator.swift in Sources */,
 				3724E616FDE7653D1F2F0B33ED27298F /* EllipticCurve.swift in Sources */,
 				131AD27AC35C0126538A0AA04E83C459 /* HealthCardType+EfCardAccess.swift in Sources */,
+				24A3BAABC69F64569F21FF2673670DBD /* HealthCardType+ReadFile.swift in Sources */,
 				8F341F5CD0A56BAA43498F50D91C1AAB /* KeyAgreement.swift in Sources */,
 				84F93D60A32C426094E02041B710CD68 /* KeyDerivationFunction.swift in Sources */,
 				68584D5D1D876BB64DA14EAF0D05D652 /* SecureCardChannel.swift in Sources */,
@@ -869,6 +848,7 @@
 				D88315E1F72412A7F79519C758BAA813 /* EcdhKeyPairGenerator.swift in Sources */,
 				44EFA4FE0634AD8C791CB30B1AE9E6DF /* EllipticCurve.swift in Sources */,
 				80853D6FB67CD809EFE462B8D1D434E9 /* HealthCardType+EfCardAccess.swift in Sources */,
+				5B4FD65AE930BAF63EDBD45021FF1952 /* HealthCardType+ReadFile.swift in Sources */,
 				83828EF44738F5F37A27BC0F11E77EAE /* KeyAgreement.swift in Sources */,
 				95A001DB3E59043A7EEFF0B43BA0DD89 /* KeyDerivationFunction.swift in Sources */,
 				AE0E74E224448B2AD15CD08C596FFA51 /* SecureCardChannel.swift in Sources */,
@@ -1000,10 +980,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -1302,10 +1280,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = A9FL89PFFL;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";

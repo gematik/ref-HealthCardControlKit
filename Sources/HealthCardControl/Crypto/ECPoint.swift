@@ -111,7 +111,7 @@ extension ECPoint {
 
     private func encoded(compression: Bool, padToByteCount: Int = 32) -> Data {
         switch self {
-        case .infinite: return Data(bytes: [0x0])
+        case .infinite: return Data([0x0])
         case .finite:
             if compression {
                 preconditionFailure("ECPoint encoding with compression is not implemented")
@@ -120,7 +120,7 @@ extension ECPoint {
                       let yCoord = self.yCoord else {
                     preconditionFailure("ECPoint was said to be finite, but one coordinate was not")
                 }
-                return Data(bytes: [0x04] +
+                return Data([0x04] +
                         xCoord.serialize().dropLeadingZeroByte.padWithLeadingZeroes(totalLength: padToByteCount) +
                         yCoord.serialize().dropLeadingZeroByte.padWithLeadingZeroes(totalLength: padToByteCount))
             }

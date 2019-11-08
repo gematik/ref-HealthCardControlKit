@@ -832,7 +832,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},ALW) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">04EE</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">04EE</attribute>
 								</attributes>
 							</child>
@@ -846,7 +846,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},OR{ PWD(02), AND{PWD(01),AUTCHAT(cvc_FlagList_TI:00800000000000)}, AUTCHAT(cvc_FlagList_TI:00400000000000), AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMRSPENC}}) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">0497</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">0497</attribute>
 								</attributes>
 							</child>
@@ -860,7 +860,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||b0||??||??},ALW) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">04ED</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">04ED</attribute>
 								</attributes>
 							</child>
@@ -874,7 +874,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},OR{PWD(02),AND{PWD(01),AUTCHAT(cvc_FlagList_TI:00200000000000)},AUTCHAT(cvc_FlagList_TI:00100000000000),AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMRSPENC}}) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">0481</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">0481</attribute>
 								</attributes>
 							</child>
@@ -888,7 +888,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},ALW) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">0375</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">0375</attribute>
 								</attributes>
 							</child>
@@ -902,7 +902,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},OR{PWD(02),AND{PWD(01),AUTCHAT(cvc_FlagList_TI:00800000000000)},AUTCHAT(cvc_FlagList_TI:00400000000000),AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMRSPENC}}) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">031D</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">031D</attribute>
 								</attributes>
 							</child>
@@ -916,7 +916,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||b0||??||??},ALW) }]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">0376</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">0376</attribute>
 								</attributes>
 							</child>
@@ -930,7 +930,7 @@
 									<attribute id="accessRules">CB{ [ACTIVATED,1,{ ({00||e4||00||00,00||0e||??||??,80||0e||??||??},OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)}), ({00||d6||??||??,00||d0||??||??},AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMCMDENC}), ({00||b0||??||??},OR{PWD(02), AND{PWD(01),AUTCHAT(cvc_FlagList_TI:00200000000000)}, AUTCHAT(cvc_FlagList_TI:00100000000000), AND{OR{SMMAC(13),SMMAC(18),SMMAC(cvc_FlagList_CMS:00800000000000)},SMRSPENC}})}]}</attribute>
 									<attribute id="flagTransactionMode">TRUE</attribute>
 									<attribute id="flagChecksum">FALSE</attribute>
-									<attribute id="numberOfOctet">076c</attribute>
+									<attribute id="numberOfOctet">0308</attribute>
 									<attribute id="positionLogicalEndOfFile" OptionPers="true" herstellerspezifisch="true">0308</attribute>
 								</attributes>
 							</child>

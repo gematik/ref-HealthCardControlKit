@@ -26,7 +26,7 @@ extension Data {
     func sha1() -> Data {
         var hash = [UInt8](repeating: 0, count: Int(CC_SHA1_DIGEST_LENGTH))
         self.withUnsafeBytes { bytes in
-            _ = CC_SHA1(bytes, CC_LONG(self.count), &hash)
+            _ = CC_SHA1(bytes.baseAddress!, CC_LONG(self.count), &hash) //swiftlint:disable:this force_unwrapping
         }
         return Data(hash)
     }
