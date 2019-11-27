@@ -19,7 +19,7 @@ targets:
     type: framework
     platform: [iOS,macOS]
     info:
-      path: DerivedData/HealthCardControlKit/Info.plist
+      path: Resources/HealthCardControlKit_Info.plist
     sources:
       - path: Sources/HealthCardControl
     dependencies:
