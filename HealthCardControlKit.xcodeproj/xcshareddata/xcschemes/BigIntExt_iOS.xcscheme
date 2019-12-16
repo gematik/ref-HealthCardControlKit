@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B6F6B8686"
+               BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B"
                BuildableName = "BigIntExt.framework"
                BlueprintName = "BigIntExt_iOS"
                ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -27,13 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "NO"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "62F9995FBEB68E4BC80D33D92CAC13BC"
+               BlueprintIdentifier = "62F9995FBEB68E4BC80D33D9"
                BuildableName = "BigIntExtTests.xctest"
                BlueprintName = "BigIntExtTests_iOS"
                ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -43,7 +44,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B6F6B8686"
+            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B"
             BuildableName = "BigIntExt.framework"
             BlueprintName = "BigIntExt_iOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -53,6 +54,8 @@
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -67,7 +70,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B6F6B8686"
+            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B"
             BuildableName = "BigIntExt.framework"
             BlueprintName = "BigIntExt_iOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -88,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B6F6B8686"
+            BlueprintIdentifier = "FACE2AB5FF64F9E80B85681B"
             BuildableName = "BigIntExt.framework"
             BlueprintName = "BigIntExt_iOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">

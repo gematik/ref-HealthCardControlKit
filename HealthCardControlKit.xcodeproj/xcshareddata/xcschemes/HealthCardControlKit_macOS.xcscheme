@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F28C7C304F8FEC2A540D26FBC9FC7CBA"
+               BlueprintIdentifier = "F28C7C304F8FEC2A540D26FB"
                BuildableName = "HealthCardControlKit.framework"
                BlueprintName = "HealthCardControlKit_macOS"
                ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -27,13 +27,14 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "NO"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE7D374ED713B4441D9E7F704B57934B"
+               BlueprintIdentifier = "CE7D374ED713B4441D9E7F70"
                BuildableName = "HealthCardControlKitTests.xctest"
                BlueprintName = "HealthCardControlKitTests_macOS"
                ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -43,7 +44,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FBC9FC7CBA"
+            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FB"
             BuildableName = "HealthCardControlKit.framework"
             BlueprintName = "HealthCardControlKit_macOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -53,6 +54,8 @@
       </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
+      <CodeCoverageTargets>
+      </CodeCoverageTargets>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -67,7 +70,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FBC9FC7CBA"
+            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FB"
             BuildableName = "HealthCardControlKit.framework"
             BlueprintName = "HealthCardControlKit_macOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">
@@ -88,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FBC9FC7CBA"
+            BlueprintIdentifier = "F28C7C304F8FEC2A540D26FB"
             BuildableName = "HealthCardControlKit.framework"
             BlueprintName = "HealthCardControlKit_macOS"
             ReferencedContainer = "container:HealthCardControlKit.xcodeproj">

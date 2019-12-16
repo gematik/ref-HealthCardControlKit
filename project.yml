@@ -39,7 +39,7 @@ targets:
     type: framework
     platform: [iOS,macOS]
     info:
-      path: DerivedData/BigIntExt/Info.plist
+      path: Resources/BigIntExt_Info.plist
     sources:
       - Sources/BigIntExt
     dependencies:
