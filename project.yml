@@ -52,12 +52,16 @@ targets:
     name: HealthCardControlKitTests_${platform}
     type: bundle.unit-test
     platform: [macOS,iOS]
+    info:
+      path: Resources/HealthCardControlKitTests_Info.plist
     sources:
-      - path: Tests
+      - path: Tests/HealthCardControlTests
         excludes:
-          - "HealthCardControlTests/Integration"
-          - "HealthCardControlTests/Util/CardSimulatorTerminalResource.swift"
-          - "HealthCardControlTests/Util/HCCTerminalTestCase.swift"
+          - Integration
+          - Common
+          - Util/CardSimulatorTerminalResource.swift
+          - Util/HCCTerminalTestCase.swift
+          - Resources.bundle
     dependencies:
     - target: HealthCardControlKit_${platform}
     - carthage: HealthCardAccessKit

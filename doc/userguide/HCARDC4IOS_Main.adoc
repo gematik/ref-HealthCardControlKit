@@ -1,0 +1,6 @@
+include::config.adoc[]
+
+== HealthCardAccess API
+
+include::HCARDC4IOS_Overview.adoc[]
+include::HCARDC4IOS_GettingStarted.adoc[]

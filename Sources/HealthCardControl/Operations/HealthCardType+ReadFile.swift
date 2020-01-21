@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2019 gematik GmbH
+//  Copyright (c) 2020 gematik GmbH
 //  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ public enum ReadError: Swift.Error, Equatable {
     case unexpectedResponse(state: ResponseStatus)
     /// No data has been returned
     case noData(state: ResponseStatus)
+    case fcpMissingReadSize(state: ResponseStatus)
 }
 
 public enum SelectError: Swift.Error, Equatable {
@@ -47,7 +48,7 @@ extension HealthCardType {
     ///
     /// - Throws: Emits `ReadError` on the Executable in case of failure.
     ///
-    /// - Returns: Executor that reads the current selected file
+    /// - Returns: Executable that reads the current selected file
     public func readSelectedFile(expected size: Int?, failOnEndOfFileWarning: Bool = true, offset: Int = 0)
                     -> Executable<Data> {
         let maxResponseLength = self.currentCardChannel.maxResponseLength - 2 // allow for 2 status bytes sw1, sw2
@@ -99,8 +100,8 @@ extension HealthCardType {
     ///
     /// - Returns: Executable chain that selects the given file when executed
     public func selectDedicated(file: DedicatedFile, fcp: Bool = false, length: Int = 256)
-                    -> Executable<(DedicatedFile, FileControlParameter?)> {
-        return Executable<(DedicatedFile, FileControlParameter?)>
+                    -> Executable<(ResponseStatus, FileControlParameter?)> {
+        return Executable<(ResponseStatus, FileControlParameter?)>
                 .unit(HealthCardCommand.Select.selectFile(with: file.aid))
                 .flatMap { command in
                     command.execute(on: self)
@@ -110,7 +111,7 @@ extension HealthCardType {
                         throw SelectError.failedToSelect(aid: file.aid, status: response.responseStatus)
                     }
                     guard let fid = file.fid else {
-                        return Executable<(DedicatedFile, FileControlParameter?)>.unit((file, nil))
+                        return Executable<(ResponseStatus, FileControlParameter?)>.unit((response.responseStatus, nil))
                     }
                     let command = fcp ?
                             try HealthCardCommand.Select.selectEfRequestingFcp(with: fid, expectedLength: length)
@@ -124,9 +125,9 @@ extension HealthCardType {
                                 throw ReadError.noData(state: fidResponse.responseStatus)
                             }
                             let fcp = try FileControlParameter.parse(data: fcpData)
-                            return (file, fcp)
+                            return (fidResponse.responseStatus, fcp)
                         } else {
-                            return (file, nil)
+                            return (fidResponse.responseStatus, nil)
                         }
                     }
                 }

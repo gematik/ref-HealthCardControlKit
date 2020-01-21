@@ -1236,7 +1236,7 @@
 }]}</attribute>
                   <attribute id="flagTransactionMode">TRUE</attribute>
                   <attribute id="flagChecksum">FALSE</attribute>
-                  <attribute id="numberOfOctet">076c</attribute>
+                  <attribute id="numberOfOctet">04da</attribute>
                   <attribute id="positionLogicalEndOfFile">04DA</attribute>
                   <attribute id="uniqueID">1052</attribute>
                 </attributes>

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2019 gematik GmbH
+//  Copyright (c) 2020 gematik GmbH
 //  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -59,13 +59,13 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileTillEOF() {
-        guard let (file, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
+        guard let (responseStatus, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
 
         let fileResponse = HCCTerminalTestCase.healthCard.readSelectedFile(expected: nil, failOnEndOfFileWarning: false)
                 .run(on: Executor.trampoline)
@@ -75,13 +75,13 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileFailOnEOF() {
-        guard let (file, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
+        guard let (responseStatus, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
 
         let error = HCCTerminalTestCase.healthCard.readSelectedFile(expected: 2000)
                 .run(on: Executor.trampoline)
@@ -95,18 +95,18 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFile() {
-        guard let (file, fcp) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile, fcp: true)
+        guard let (responseStatus, fcp) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile, fcp: true)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
         expect(fcp).toNot(beNil())
 
         // swiftlint:disable:next force_unwrapping
-        let fileResponse = HCCTerminalTestCase.healthCard.readSelectedFile(expected: Int(fcp!.size),
-                        failOnEndOfFileWarning: false)
+        let fileResponse = HCCTerminalTestCase.healthCard.readSelectedFile(expected: Int(fcp!.readSize!),
+                        failOnEndOfFileWarning: true)
                 .run(on: Executor.trampoline)
                 .test()
 
@@ -124,17 +124,17 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
             return
         }
 
-        guard let (file, fcp) = healthCard.selectDedicated(file: dedicatedFile, fcp: true)
+        guard let (responseStatus, fcp) = healthCard.selectDedicated(file: dedicatedFile, fcp: true)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
         expect(fcp).toNot(beNil())
 
         // swiftlint:disable:next force_unwrapping
-        let fileResponse = healthCard.readSelectedFile(expected: Int(fcp!.size), failOnEndOfFileWarning: true)
+        let fileResponse = healthCard.readSelectedFile(expected: Int(fcp!.readSize!), failOnEndOfFileWarning: true)
                 .run(on: Executor.trampoline)
                 .test()
 
@@ -152,13 +152,13 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
             return
         }
 
-        guard let (file, fcp) = healthCard.selectDedicated(file: dedicatedFile, fcp: true)
+        guard let (responseStatus, fcp) = healthCard.selectDedicated(file: dedicatedFile, fcp: true)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
         expect(fcp).toNot(beNil())
 
         let fileResponse = healthCard.readSelectedFile(expected: nil, failOnEndOfFileWarning: false)
@@ -179,14 +179,14 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
             return
         }
 
-        guard let (file, _) = healthCard.selectDedicated(file: dedicatedFile)
+        guard let (responseStatus, _) = healthCard.selectDedicated(file: dedicatedFile)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
             return
         }
 
-        expect(file) == dedicatedFile
+        expect(responseStatus) == .success
 
         let fileResponse = healthCard.readSelectedFile(expected: 2000, failOnEndOfFileWarning: true)
                 .run(on: Executor.trampoline)
@@ -199,27 +199,5 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
         }
 
         expect(fileResponse.value).to(beNil())
-    }
-}
-
-extension FutureType {
-
-    func test(timeout millis: Int = 3000, sleep interval: TimeInterval = 0.1) -> FutureEvent<Self.Element> {
-        var done = false
-        var futureEvent: FutureEvent<Self.Element>!
-
-        on { event in
-            futureEvent = event
-            done = true
-        }
-        let timeoutTime = DispatchTime.now() + DispatchTimeInterval.milliseconds(millis)
-        while !done && (timeoutTime > DispatchTime.now() || millis <= 0) {
-            RunLoop.current.run(mode: .default, before: Date(timeIntervalSinceNow: interval))
-        }
-        if !done {
-            DLog("Timeout by Test observer")
-            futureEvent = FutureEvent.failed(.timeout)
-        }
-        return futureEvent
     }
 }

@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2019 gematik GmbH
+//  Copyright (c) 2020 gematik GmbH
 //  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -30,13 +30,6 @@ enum CardAid: ApplicationIdentifier {
     var efVersion2Sfi: ShortFileIdentifier {
         // swiftlint:disable:next force_unwrapping
         return EgkFileSystem.EF.version2.sfid!
-    }
-}
-
-extension HealthCard {
-    public enum Error: Swift.Error {
-        case unknownCardType(aid: ApplicationIdentifier?)
-        case illegalGeneration(version: CardVersion2)
     }
 }
 
@@ -85,14 +78,10 @@ extension CardChannelType {
                             try ApplicationIdentifier(aidData)
                         }
                     } else {
-                        return Executable<HealthCardCommand>
-                                .evaluate {
-                                    try HealthCardCommand.Select
-                                            .selectRootRequestingFcp(expectedLength: channel.expectedLengthWildcard)
-                                }
-                                .flatMap {
-                                    $0.execute(on: channel, writeTimeout: writeTimeout, readTimeout: readTimeout)
-                                }
+                        return try HealthCardCommand.Select.selectRootRequestingFcp(
+                                        expectedLength: channel.expectedLengthWildcard
+                                )
+                                .execute(on: channel, writeTimeout: writeTimeout, readTimeout: readTimeout)
                                 .map {
                                     let fcp = try FileControlParameter.parse(data: $0.data ?? Data.empty)
                                     guard let aid = fcp.applicationIdentifier else {
@@ -110,7 +99,7 @@ extension CardChannelType {
                 }
                 .flatMap { (cardAid: CardAid) in
                     try HealthCardCommand.Read.readFileCommand(with: cardAid.efVersion2Sfi,
-                                                               ne: channel.expectedLengthWildcard)
+                                    ne: channel.expectedLengthWildcard)
                             .execute(on: channel, writeTimeout: writeTimeout, readTimeout: readTimeout)
                             .map { response in
                                 let cardVersion2 = try CardVersion2(data: response.data ?? Data.empty)

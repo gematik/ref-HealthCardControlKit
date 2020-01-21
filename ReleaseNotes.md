@@ -1,3 +1,6 @@
+# Release 1.0.7
+- update organization name in API documentation - update Carthage dependencies
+
 # Release 1.0.6
 - update Carthage dependencies
 

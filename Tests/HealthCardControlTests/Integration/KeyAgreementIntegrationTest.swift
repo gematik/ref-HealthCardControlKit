@@ -1,5 +1,5 @@
 //
-//  Copyright (c) 2019 gematik GmbH
+//  Copyright (c) 2020 gematik GmbH
 //  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -36,12 +36,14 @@ final class KeyAgreementIntegrationTest: HCCTerminalTestCase {
         let can = try! CAN.from(Data("12345678".utf8)) //swiftlint:disable:this force_try
         expect {
             var paceKey: SecureMessaging?
+            // tag::negotiateSessionKey[]
             try KeyAgreement.Algorithm.idPaceEcdhGmAesCbcCmac128.negotiateSessionKey(
                             channel: HCCTerminalTestCase.healthCard.currentCardChannel,
                             can: can,
                             writeTimeout: 0,
                             readTimeout: 10)
                     .run(on: Executor.trampoline)
+                    // end::negotiateSessionKey[]
                     .on { event in
                         paceKey = event.value
                     }
