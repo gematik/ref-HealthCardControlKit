@@ -1,0 +1,96 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 15,
+      "symbol": "KeyAgreement.Error",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 16,
+      "symbol": "KeyAgreement.Error.illegalArgument",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 17,
+      "symbol": "KeyAgreement.Error.unexpectedFormedAnswerFromCard",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 18,
+      "symbol": "KeyAgreement.Error.resultOfEcArithmeticWasInfinite",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 19,
+      "symbol": "KeyAgreement.Error.macPcdVerificationFailedOnCard",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 20,
+      "symbol": "KeyAgreement.Error.macPiccVerificationFailedLocally",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 21,
+      "symbol": "KeyAgreement.Error.noValidHealthCardStatus",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 22,
+      "symbol": "KeyAgreement.Error.efCardAccessNotAvailable",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/KeyAgreement.swift",
+      "line": 23,
+      "symbol": "KeyAgreement.Error.unsupportedKeyAgreementAlgorithm(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/SecureCardChannel.swift",
+      "line": 9,
+      "symbol": "SecureCardChannel",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/SecureCardChannel.swift",
+      "line": 33,
+      "symbol": "SecureCardChannel.init(session:card:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/SecureHealthCard.swift",
+      "line": 9,
+      "symbol": "SecureHealthCard",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI/Sources/HealthCardControl/SecureMessaging/SecureHealthCard.swift",
+      "line": 21,
+      "symbol": "SecureHealthCard.init(session:card:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/tst_tt_build/Jenkins/workspace/HealthCardControlKit-REF-SWIFT-LIB-CI"
+}

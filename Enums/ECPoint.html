@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ECPoint Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/ECPoint" class="dashAnchor"></a>
+    <a title="ECPoint Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">HealthCardControlKit Docs</a>
+          <span class="no-mobile"> (76% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://build.top.local/source/git/refImpl/mobszen/iOS/ref-HealthCardControlKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">HealthCardControlKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          ECPoint Enumeration Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>ECPoint</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ECPoint</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Representing a point on a <code><a href="../Structs/EllipticCurve.html">EllipticCurve</a></code>.
+Can be .infinite or .finite(ECPointCoordinates), where <code><a href="../Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a></code> is (x: BigInt, y:BigInt).</p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit7ECPointO8infiniteyA2CmF"></a>
+                      <a name="//apple_ref/swift/Element/infinite" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit7ECPointO8infiniteyA2CmF">infinite</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents the point infinity</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="n">infinite</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit7ECPointO6finiteyAC6BigIntAEV1x_AF1yt_tcACmF"></a>
+                      <a name="//apple_ref/swift/Element/finite(_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit7ECPointO6finiteyAC6BigIntAEV1x_AF1yt_tcACmF">finite(_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Represents a finite point with coordinates (x: BigInt, y: BigInt)</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">finite</span><span class="p">(</span><span class="kt"><a href="../Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a></span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit7ECPointO6xCoord6BigIntAEVSgvp"></a>
+                      <a name="//apple_ref/swift/Property/xCoord" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit7ECPointO6xCoord6BigIntAEVSgvp">xCoord</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>(Normalized) x coordinate of this ECPoint
+Returns nil when this ECPoint is infinite</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">xCoord</span><span class="p">:</span> <span class="kt">BigInt</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit7ECPointO6yCoord6BigIntAEVSgvp"></a>
+                      <a name="//apple_ref/swift/Property/yCoord" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit7ECPointO6yCoord6BigIntAEVSgvp">yCoord</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>(Normalized) y coordinate of this ECPoint
+Returns nil when this ECPoint is infinite</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">yCoord</span><span class="p">:</span> <span class="kt">BigInt</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit7ECPointO26encodedUncompressed32Bytes10Foundation4DataVvp"></a>
+                      <a name="//apple_ref/swift/Property/encodedUncompressed32Bytes" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit7ECPointO26encodedUncompressed32Bytes10Foundation4DataVvp">encodedUncompressed32Bytes</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Uncompressed data encoding of ECPoint. Hexadecimal representation should start with 0x04.
+see: <a href="https://www.secg.org/SEC1-Ver-1.0.pdf">https://www.secg.org/SEC1-Ver-1.0.pdf</a> 2.3.3 EllipticCurvePoint-to-OctetString Conversion</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">encodedUncompressed32Bytes</span><span class="p">:</span> <span class="kt">Data</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:SQ2eeoiySbx_xtFZ"></a>
+                      <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:SQ2eeoiySbx_xtFZ">==(_:_:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">ECPoint</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">ECPoint</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement.html">KeyAgreement</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Algorithm.html">– Algorithm</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction.html">KeyDerivationFunction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/KeyFuncType.html">– KeyFuncType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/Mode.html">– Mode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureCardChannel.html">SecureCardChannel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureHealthCard.html">SecureHealthCard</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/ECPoint.html">ECPoint</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardChannelType.html">CardChannelType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardType.html">CardType</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/SecureMessaging.html">SecureMessaging</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/EllipticCurve.html">EllipticCurve</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Typealiases.html">Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="http://www.gematik.de" target="_blank" rel="external">gematik GmbH</a>. All rights reserved. (Last updated: 2020-01-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>
