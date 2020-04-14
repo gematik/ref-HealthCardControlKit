@@ -4,7 +4,8 @@
 /// https://github.com/attaswift/BigInt/pull/61
 /// Once the pull request is accepted into the framework, this class and its target has to be deleted.
 
-@testable import BigInt
+import BigInt
+@testable import BigIntExt
 import Foundation
 import XCTest
 

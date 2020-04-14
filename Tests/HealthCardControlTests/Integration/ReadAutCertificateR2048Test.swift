@@ -14,6 +14,7 @@
 //  limitations under the License.
 //
 
+import CardSimulationTerminalTestCase
 import Foundation
 import GemCommonsKit
 import HealthCardAccessKit
@@ -21,18 +22,17 @@ import HealthCardAccessKit
 import Nimble
 import XCTest
 
-final class ReadAutCertificateR2048Test: HCCTerminalTestCase {
-
+final class ReadAutCertificateR2048Test: CardSimulationTerminalTestCase {
     private let dedicatedFile = DedicatedFile(
-        aid: EgkFileSystem.DF.ESIGN.aid,
-        fid: EgkFileSystem.EF.esignCChAutR2048.fid
+            aid: EgkFileSystem.DF.ESIGN.aid,
+            fid: EgkFileSystem.EF.esignCChAutR2048.fid
     )
     private var expectedCertificate: Data!
 
     override func setUp() {
         super.setUp()
 
-        let bundle = Bundle(for: ReadFileIntegrationTest.self)
+        let bundle = Bundle(for: ReadAutCertificateR2048Test.self)
         let path = bundle.testResourceFilePath(in: "Resources", for: "Certificates/esignCChAutR2048_2.cer").asURL
         do {
             expectedCertificate = try Data(contentsOf: path)
@@ -42,11 +42,11 @@ final class ReadAutCertificateR2048Test: HCCTerminalTestCase {
     }
 
     func testReadAutCertificate2048() {
-        let response = HCCTerminalTestCase.healthCard
-            .readAutCertificate()
-            .run(on: Executor.trampoline)
-            .test()
-            .value
+        let response = CardSimulationTerminalTestCase.healthCard
+                .readAutCertificate()
+                .run(on: Executor.trampoline)
+                .test()
+                .value
         expect(response?.info) == .efAutR2048
         expect(response?.certificate) == expectedCertificate
     }

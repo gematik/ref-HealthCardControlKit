@@ -16,6 +16,7 @@
 
 import CardReaderProviderApi
 import CardSimulationCardReaderProvider
+import CardSimulationTerminalTestCase
 import DataKit
 import Foundation
 import GemCommonsKit
@@ -24,14 +25,12 @@ import HealthCardAccessKit
 import Nimble
 import XCTest
 
-final class ReadFileIntegrationTest: HCCTerminalTestCase {
+final class ReadFileIntegrationTest: CardSimulationTerminalTestCase {
+    static let thisConfigFile = "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(
-                in: "Resources",
-                for: "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
-        )
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
@@ -53,13 +52,13 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
         }
 
         _ = HealthCardCommand.Select.selectRoot()
-                .execute(on: HCCTerminalTestCase.healthCard)
+                .execute(on: CardSimulationTerminalTestCase.healthCard)
                 .run(on: Executor.trampoline)
                 .test()
     }
 
     func testReadFileTillEOF() {
-        guard let (responseStatus, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
+        guard let (responseStatus, _) = CardSimulationTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
@@ -67,7 +66,8 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
         }
         expect(responseStatus) == .success
 
-        let fileResponse = HCCTerminalTestCase.healthCard.readSelectedFile(expected: nil, failOnEndOfFileWarning: false)
+        let fileResponse = CardSimulationTerminalTestCase.healthCard.readSelectedFile(expected: nil,
+                                                                                      failOnEndOfFileWarning: false)
                 .run(on: Executor.trampoline)
                 .test()
 
@@ -75,7 +75,7 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileFailOnEOF() {
-        guard let (responseStatus, _) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
+        guard let (responseStatus, _) = CardSimulationTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
@@ -83,7 +83,7 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
         }
         expect(responseStatus) == .success
 
-        let error = HCCTerminalTestCase.healthCard.readSelectedFile(expected: 2000)
+        let error = CardSimulationTerminalTestCase.healthCard.readSelectedFile(expected: 2000)
                 .run(on: Executor.trampoline)
                 .test().error
 
@@ -95,7 +95,8 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFile() {
-        guard let (responseStatus, fcp) = HCCTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile, fcp: true)
+        guard let (responseStatus, fcp) = CardSimulationTerminalTestCase.healthCard.selectDedicated(file: dedicatedFile,
+                                                                                                    fcp: true)
                 .run(on: Executor.trampoline)
                 .test().value else {
             Nimble.fail("Failed to select and read FCP [Preparing test-case]")
@@ -105,8 +106,8 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
         expect(fcp).toNot(beNil())
 
         // swiftlint:disable:next force_unwrapping
-        let fileResponse = HCCTerminalTestCase.healthCard.readSelectedFile(expected: Int(fcp!.readSize!),
-                        failOnEndOfFileWarning: true)
+        let fileResponse = CardSimulationTerminalTestCase.healthCard.readSelectedFile(expected: Int(fcp!.readSize!),
+                                                                                      failOnEndOfFileWarning: true)
                 .run(on: Executor.trampoline)
                 .test()
 
@@ -114,7 +115,7 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileInChunks() {
-        guard let card = HCCTerminalTestCase.card as? SimulatorCard else {
+        guard let card = CardSimulationTerminalTestCase.card as? SimulatorCard else {
             Nimble.fail("This test only works with CardSimulation cards")
             return
         }
@@ -142,7 +143,7 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileInChunksTillEOF() {
-        guard let card = HCCTerminalTestCase.card as? SimulatorCard else {
+        guard let card = CardSimulationTerminalTestCase.card as? SimulatorCard else {
             Nimble.fail("This test only works with CardSimulation cards")
             return
         }
@@ -169,7 +170,7 @@ final class ReadFileIntegrationTest: HCCTerminalTestCase {
     }
 
     func testReadFileInChunksFailOnEOF() {
-        guard let card = HCCTerminalTestCase.card as? SimulatorCard else {
+        guard let card = CardSimulationTerminalTestCase.card as? SimulatorCard else {
             Nimble.fail("This test only works with CardSimulation cards")
             return
         }

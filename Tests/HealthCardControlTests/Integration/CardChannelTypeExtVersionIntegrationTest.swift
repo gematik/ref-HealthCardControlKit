@@ -14,26 +14,25 @@
 //  limitations under the License.
 //
 
+import CardSimulationTerminalTestCase
 import HealthCardAccessKit
 @testable import HealthCardControlKit
 import Nimble
 import XCTest
 
-final class CardChannelTypeExtVersionIntegrationTest: HCCTerminalTestCase {
+final class CardChannelTypeExtVersionIntegrationTest: CardSimulationTerminalTestCase {
+    static let thisConfigFile = "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(
-                in: "Resources",
-                for: "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
-        )
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
     func testReadCardTypeAndVersion() {
         expect {
             var mType: HealthCardPropertyType?
-            HCCTerminalTestCase.healthCard.currentCardChannel.readCardType()
+            CardSimulationTerminalTestCase.healthCard.currentCardChannel.readCardType()
                     .run(on: Executor.trampoline)
                     .on { event in
                         mType = event.value

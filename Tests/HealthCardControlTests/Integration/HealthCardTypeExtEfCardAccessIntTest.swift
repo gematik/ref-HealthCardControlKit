@@ -15,24 +15,26 @@
 //
 
 import CardReaderProviderApi
+import CardSimulationTerminalTestCase
 import HealthCardAccessKit
 @testable import HealthCardControlKit
 import Nimble
 import XCTest
 
-final class HealthCardTypeExtEfCardAccessIntTest: HCCTerminalTestCase {
+final class HealthCardTypeExtEfCardAccessIntTest: CardSimulationTerminalTestCase {
     static let thisConfigFile = "Configuration/configuration_TLK_COS_image-kontaktlos128.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(in: "Resources", for: self.thisConfigFile)
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
     func testReadEfCardAccess() {
         expect {
             var mTemp: KeyAgreement.Algorithm?
-            try HCCTerminalTestCase.healthCard.determineKeyAgreementAlgorithm(writeTimeout: 30, readTimeout: 30)
+            try CardSimulationTerminalTestCase.healthCard.determineKeyAgreementAlgorithm(writeTimeout: 30,
+                                                                                         readTimeout: 30)
                     .run(on: Executor.trampoline)
                     .on { event in
                         mTemp = event.value

@@ -23,30 +23,20 @@ targets:
     sources:
       - path: Sources/HealthCardControl
     dependencies:
-      - target: BigIntExt_${platform}
       - carthage: HealthCardAccessKit
-      - carthage: CardReaderProviderApi
-      - carthage: CardReaderAccess
+        embed: true
       - carthage: GemCommonsKit
+        embed: true
       - carthage: ASN1Kit
+        embed: true
       - carthage: DataKit
+        embed: true
       - carthage: BigInt
+        embed: true
+    transitivelyLinkDependencies: true
     scheme:
       testTargets:
         - HealthCardControlKitTests_${platform}
-      gatherCoverageData: true
-  BigIntExt:
-    type: framework
-    platform: [iOS,macOS]
-    info:
-      path: Resources/BigIntExt_Info.plist
-    sources:
-      - Sources/BigIntExt
-    dependencies:
-      - carthage: BigInt
-    scheme:
-      testTargets:
-        - BigIntExtTests_${platform}
       gatherCoverageData: true
   HealthCardControlKitTests:
     name: HealthCardControlKitTests_${platform}
@@ -59,22 +49,10 @@ targets:
         excludes:
           - Integration
           - Common
-          - Util/CardSimulatorTerminalResource.swift
-          - Util/HCCTerminalTestCase.swift
           - Resources.bundle
     dependencies:
     - target: HealthCardControlKit_${platform}
-    - carthage: HealthCardAccessKit
     - carthage: CardReaderProviderApi
     - carthage: CardReaderAccess
     - carthage: Nimble
-    - carthage: DataKit
-    - carthage: BigInt
-  BigIntExtTests:
-    type: bundle.unit-test
-    platform: [macOS,iOS]
-    sources:
-      - path: Tests/BigIntExtTests
-    dependencies:
-      - carthage: BigInt
 buildImplicitDependencies: true

@@ -15,20 +15,19 @@
 //
 
 import CardReaderProviderApi
+import CardSimulationTerminalTestCase
 import Foundation
 import HealthCardAccessKit
 @testable import HealthCardControlKit
 import Nimble
 import XCTest
 
-final class SelectCommandIntegrationTest: HCCTerminalTestCase {
-
+final class SelectCommandIntegrationTest: CardSimulationTerminalTestCase {
     func testSelectRoot() {
-
         expect {
             var mTemp: HealthCardResponseType?
             HealthCardCommand.Select.selectRoot()
-                    .execute(on: HCCTerminalTestCase.healthCard)
+                    .execute(on: CardSimulationTerminalTestCase.healthCard)
                     .run(on: Executor.trampoline)
                     .on { event in
                         mTemp = event.value
@@ -38,14 +37,13 @@ final class SelectCommandIntegrationTest: HCCTerminalTestCase {
     }
 
     func testSelectFileByAidThenSelectParentFolder() {
-
         expect {
             var mTemp: HealthCardResponseType?
             HealthCardCommand.Select.selectFile(with: EgkFileSystem.DF.GDD.aid)
-                    .execute(on: HCCTerminalTestCase.healthCard)
+                    .execute(on: CardSimulationTerminalTestCase.healthCard)
                     .flatMap { _ in
                         HealthCardCommand.Select.selectRoot()
-                                .execute(on: HCCTerminalTestCase.healthCard)
+                                .execute(on: CardSimulationTerminalTestCase.healthCard)
                     }
                     .run(on: Executor.trampoline)
                     .on { event in
@@ -64,7 +62,7 @@ final class SelectCommandIntegrationTest: HCCTerminalTestCase {
                                                        // swiftlint:disable:previous force_unwrapping
                                                        ne: cEgkAutCVCE256Count + 1,
                                                        offset: 0)
-                    .execute(on: HCCTerminalTestCase.healthCard, readTimeout: 30)
+                    .execute(on: CardSimulationTerminalTestCase.healthCard, readTimeout: 30)
                     .run(on: Executor.trampoline)
                     .on { event in
                         mTemp = event.value

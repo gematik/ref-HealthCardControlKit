@@ -21,6 +21,8 @@ extension HealthCard {
     public enum Error: Swift.Error {
         /// Operational error of the underlying card
         case operational
+        /// Underlying card responds with an unexpected status
+        case unexpectedResponse(actual: ResponseStatus, expected: ResponseStatus)
         /// The application identifier was not found or recognized
         case unknownCardType(aid: ApplicationIdentifier?)
         /// When the CardVersion2 file could not be read/parsed

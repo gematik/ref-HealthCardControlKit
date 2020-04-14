@@ -14,18 +14,19 @@
 //  limitations under the License.
 //
 
+import CardSimulationTerminalTestCase
 import Foundation
 import HealthCardAccessKit
 @testable import HealthCardControlKit
 import Nimble
 import XCTest
 
-final class HealthCardTypeExtESIGNIntegrationTest: HCCTerminalTestCase {
+final class HealthCardTypeExtESIGNIntegrationTest: CardSimulationTerminalTestCase {
     static let thisConfigFile = "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(in: "Resources", for: self.thisConfigFile)
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
@@ -36,10 +37,10 @@ final class HealthCardTypeExtESIGNIntegrationTest: HCCTerminalTestCase {
             // tag::signChallenge[]
             let challenge = Data([0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8])
             let format2Pin = try Format2Pin(pincode: "123456")
-            HCCTerminalTestCase.healthCard
-                    .verifyMrPinHome(pin: format2Pin)
+            CardSimulationTerminalTestCase.healthCard
+                    .verify(pin: format2Pin, type: EgkFileSystem.Pin.mrpinHome)
                     .flatMap { _ in
-                        HCCTerminalTestCase.healthCard.sign(challenge: challenge)
+                        CardSimulationTerminalTestCase.healthCard.sign(challenge: challenge)
                     }
                     .run(on: Executor.trampoline)
                     // end::signChallenge[]

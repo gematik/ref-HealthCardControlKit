@@ -3,8 +3,10 @@ author: gematik GmbH
 author_url: http://www.gematik.de
 exclude: /*/internal*
 module: HealthCardControlKit
-github_url: http://www.github.com/gematik/ref-HealthCardControlKit
+github_url: https://github.com/gematik/ref-HealthCardControlKit
 theme: jony
 xcodebuild_arguments:
   - "-project"
   - 'HealthCardControlKit.xcodeproj'
+  - "-scheme"
+  - 'HealthCardControlKit_macOS'

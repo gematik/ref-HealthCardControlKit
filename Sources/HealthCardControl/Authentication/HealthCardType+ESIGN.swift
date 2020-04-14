@@ -105,8 +105,10 @@ extension HealthCardType {
     /// Sign a challenge (for example a hash value) for authentication.
     ///
     /// - Parameter challenge: The data to be signed
-    /// - Returns: the certificate file and ESignInfo association to it
+    ///
     /// - Note: Only supports eGK Card types
+    ///
+    /// - Returns: Executable that signs the given challenge on the card
     public func sign(challenge: Data) -> Executable<HealthCardResponseType> {
         return Executable<HealthCardResponseType>
                 .evaluate {

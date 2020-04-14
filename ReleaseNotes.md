@@ -1,3 +1,6 @@
+# Release 1.0.8
+- serialisation of BigUInt is now part of the BigInt framework -> remove temporary adaptation from the formerly pending PR
+
 # Release 1.0.7
 - update organization name in API documentation - update Carthage dependencies
 

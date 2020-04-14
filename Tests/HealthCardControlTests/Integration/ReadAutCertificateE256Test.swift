@@ -14,6 +14,7 @@
 //  limitations under the License.
 //
 
+import CardSimulationTerminalTestCase
 import Foundation
 import GemCommonsKit
 import HealthCardAccessKit
@@ -21,27 +22,25 @@ import HealthCardAccessKit
 import Nimble
 import XCTest
 
-final class ReadAutCertificateE256Test: HCCTerminalTestCase {
+final class ReadAutCertificateE256Test: CardSimulationTerminalTestCase {
+    static let thisConfigFile = "Configuration/configuration_EGK_G2_1_ecc.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(
-            in: "Resources",
-            for: "Configuration/configuration_EGK_G2_1_ecc.xml"
-        )
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
     private let dedicatedFile = DedicatedFile(
-        aid: EgkFileSystem.DF.ESIGN.aid,
-        fid: EgkFileSystem.EF.esignCChAutR2048.fid
+            aid: EgkFileSystem.DF.ESIGN.aid,
+            fid: EgkFileSystem.EF.esignCChAutR2048.fid
     )
     private var expectedCertificate: Data!
 
     override func setUp() {
         super.setUp()
 
-        let bundle = Bundle(for: ReadFileIntegrationTest.self)
+        let bundle = Bundle(for: ReadAutCertificateE256Test.self)
         let path = bundle.testResourceFilePath(in: "Resources", for: "Certificates/esignCChAutE256.cer").asURL
         do {
             expectedCertificate = try Data(contentsOf: path)
@@ -52,18 +51,18 @@ final class ReadAutCertificateE256Test: HCCTerminalTestCase {
 
     func testReadAutCertificateE256() {
         //swiftlint:disable:next force_try
-        let type = try! HCCTerminalTestCase.card.openBasicChannel()
-            .readCardType()
-            .run(on: Executor.trampoline)
-            .test()
-            .value
+        let type = try! CardSimulationTerminalTestCase.card.openBasicChannel()
+                .readCardType()
+                .run(on: Executor.trampoline)
+                .test()
+                .value
         //swiftlint:disable:next force_unwrapping force_try
-        let healthCard = try! HealthCard(card: HCCTerminalTestCase.card, status: .valid(cardType: type!))
+        let healthCard = try! HealthCard(card: CardSimulationTerminalTestCase.card, status: .valid(cardType: type!))
         let response = healthCard
-            .readAutCertificate()
-            .run(on: Executor.trampoline)
-            .test()
-            .value
+                .readAutCertificate()
+                .run(on: Executor.trampoline)
+                .test()
+                .value
         expect(response?.info) == .efAutE256
         expect(response?.certificate) == expectedCertificate
     }

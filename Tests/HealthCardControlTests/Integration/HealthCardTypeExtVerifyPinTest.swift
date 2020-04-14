@@ -14,18 +14,20 @@
 //  limitations under the License.
 //
 
+import CardSimulationTerminalTestCase
+
 import Foundation
 import HealthCardAccessKit
 @testable import HealthCardControlKit
 import Nimble
 import XCTest
 
-final class HealthCardTypeExtVerifyPinTest: HCCTerminalTestCase {
+final class HealthCardTypeExtVerifyPinTest: CardSimulationTerminalTestCase {
     static let thisConfigFile = "Configuration/configuration_EGK_G2_1_80276883110000095711_GuD_TCP.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(in: "Resources", for: self.thisConfigFile)
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
@@ -33,28 +35,28 @@ final class HealthCardTypeExtVerifyPinTest: HCCTerminalTestCase {
         let pinCode = "123456"
         expect {
             let format2Pin = try Format2Pin(pincode: pinCode)
-            var response: HealthCardResponseType?
-            HCCTerminalTestCase.healthCard.verifyMrPinHome(pin: format2Pin)
+            var response: VerifyPinResponse?
+            CardSimulationTerminalTestCase.healthCard.verify(pin: format2Pin, type: EgkFileSystem.Pin.mrpinHome)
                     .run(on: Executor.trampoline)
                     .on { event in
                         response = event.value
                     }
-            return response?.responseStatus
-        } == ResponseStatus.success
+            return response
+        } == VerifyPinResponse.success
     }
 
     func testVerifyMrPinHomeEgk21Failing() {
-        let pinCode = "123455"
+        let pinCode = "654321"
         expect {
             let format2Pin = try Format2Pin(pincode: pinCode)
-            var response: HealthCardResponseType?
-            HCCTerminalTestCase.healthCard.verifyMrPinHome(pin: format2Pin)
+            var response: VerifyPinResponse?
+            CardSimulationTerminalTestCase.healthCard.verify(pin: format2Pin, type: EgkFileSystem.Pin.mrpinHome)
                     .run(on: Executor.trampoline)
                     .on { event in
                         response = event.value
                     }
-            return response?.responseStatus
-        } == ResponseStatus.wrongSecretWarningCount02
+            return response
+        } == VerifyPinResponse.failed(retryCount: 2)
     }
 
     static let allTests = [

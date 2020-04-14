@@ -16,6 +16,7 @@
 
 import BigInt
 import CardReaderProviderApi
+import CardSimulationTerminalTestCase
 import Foundation
 import GemCommonsKit
 import HealthCardAccessKit
@@ -23,12 +24,12 @@ import HealthCardAccessKit
 import Nimble
 import XCTest
 
-final class KeyAgreementIntegrationTest: HCCTerminalTestCase {
+final class KeyAgreementIntegrationTest: CardSimulationTerminalTestCase {
     static let thisConfigFile = "Configuration/configuration_TLK_COS_image-kontaktlos128.xml"
 
     override class func configFile() -> URL? {
-        let bundle = Bundle(for: self)
-        let path = bundle.testResourceFilePath(in: "Resources", for: self.thisConfigFile)
+        let bundle = Bundle(for: CardSimulationTerminalTestCase.self)
+        let path = bundle.resourceFilePath(in: "Resources", for: self.thisConfigFile)
         return path.asURL
     }
 
@@ -38,7 +39,7 @@ final class KeyAgreementIntegrationTest: HCCTerminalTestCase {
             var paceKey: SecureMessaging?
             // tag::negotiateSessionKey[]
             try KeyAgreement.Algorithm.idPaceEcdhGmAesCbcCmac128.negotiateSessionKey(
-                            channel: HCCTerminalTestCase.healthCard.currentCardChannel,
+                            channel: CardSimulationTerminalTestCase.healthCard.currentCardChannel,
                             can: can,
                             writeTimeout: 0,
                             readTimeout: 10)

@@ -28,8 +28,8 @@ public enum ReadError: Swift.Error, Equatable {
 }
 
 public enum SelectError: Swift.Error, Equatable {
-    case failedToSelect(aid: ApplicationIdentifier, status: ResponseStatus?)
-    case failedToSelect(fid: FileIdentifier, status: ResponseStatus?)
+    case failedToSelectAid(_: ApplicationIdentifier, status: ResponseStatus?)
+    case failedToSelectFid(_: FileIdentifier, status: ResponseStatus?)
 }
 
 extension HealthCardType {
@@ -108,7 +108,7 @@ extension HealthCardType {
                 }
                 .flatMap { response in
                     guard response.responseStatus == .success else {
-                        throw SelectError.failedToSelect(aid: file.aid, status: response.responseStatus)
+                        throw SelectError.failedToSelectAid(file.aid, status: response.responseStatus)
                     }
                     guard let fid = file.fid else {
                         return Executable<(ResponseStatus, FileControlParameter?)>.unit((response.responseStatus, nil))
@@ -118,7 +118,7 @@ extension HealthCardType {
                             : HealthCardCommand.Select.selectEf(with: fid)
                     return command.execute(on: self).map { fidResponse in
                         guard fidResponse.responseStatus == .success else {
-                            throw SelectError.failedToSelect(fid: fid, status: fidResponse.responseStatus)
+                            throw SelectError.failedToSelectFid(fid, status: fidResponse.responseStatus)
                         }
                         if fcp {
                             guard let fcpData = fidResponse.data else {

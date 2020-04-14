@@ -64,12 +64,12 @@ final class HealthCardTypeExtESIGNTest: XCTestCase {
 
     func testReadAutCertificate() {
         let fcpResourcesPath: URL =
-            URL(fileURLWithPath: #file)
-                .deletingLastPathComponent()
-                .deletingLastPathComponent()
-                .appendingPathComponent("Resources.bundle")
-                .appendingPathComponent("FCP")
-                .appendingPathComponent("fcp_A000000167455349474E.dat")
+                URL(fileURLWithPath: #file)
+                        .deletingLastPathComponent()
+                        .deletingLastPathComponent()
+                        .appendingPathComponent("Resources.bundle")
+                        .appendingPathComponent("FCP")
+                        .appendingPathComponent("fcp_A000000167455349474E.dat")
 
         //swiftlint:disable:next force_try
         let fcp = try! FileControlParameter.parse(data: fcpResourcesPath.readFileContents())
@@ -79,10 +79,10 @@ final class HealthCardTypeExtESIGNTest: XCTestCase {
         let egkCardStatus = HealthCardStatus.valid(cardType: HealthCardPropertyType.egk(generation: .g2_1))
         let commandHandler: CommandMessageHandler = { command, _, _ in
             let selectCommand = HealthCardCommand.Select.selectFile(with: AutCertInfo.efAutE256.certificate.aid)
-                .apduCommand
+                    .apduCommand
             let selectEfCommand = try HealthCardCommand.Select.selectEfRequestingFcp(
-                with: AutCertInfo.efAutE256.certificate.fid!, //swiftlint:disable:this force_unwrapping
-                expectedLength: 0x100
+                    with: AutCertInfo.efAutE256.certificate.fid!, //swiftlint:disable:this force_unwrapping
+                    expectedLength: 0x100
             ).apduCommand
             let readCommand = try HealthCardCommand.Read.readFileCommand(ne: certSize, offset: 0)
             if command == selectCommand {
@@ -98,8 +98,8 @@ final class HealthCardTypeExtESIGNTest: XCTestCase {
         let card = MockHealthCard(status: egkCardStatus, currentCardChannel: channel)
 
         let autResponse = card.readAutCertificate()
-            .run(on: Executor.trampoline)
-            .test().value
+                .run(on: Executor.trampoline)
+                .test().value
         XCTAssertEqual(autResponse?.info, .efAutE256)
         XCTAssertEqual(autResponse?.certificate, mockCertificate)
     }
@@ -113,8 +113,8 @@ final class HealthCardTypeExtESIGNTest: XCTestCase {
 
         expect {
             card.readAutCertificate()
-                .run(on: Executor.trampoline)
-                .test().error
+                    .run(on: Executor.trampoline)
+                    .test().error
         }.to(matchError(HealthCard.Error.unsupportedCardType))
     }
 }

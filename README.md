@@ -56,10 +56,10 @@ Take the necessary preparatory steps for signing a challenge on the Health Card,
 
     let challenge = Data([0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8])
     let format2Pin = try Format2Pin(pincode: "123456")
-    HCCTerminalTestCase.healthCard
-            .verifyMrPinHome(pin: format2Pin)
+    CardSimulationTerminalTestCase.healthCard
+            .verify(pin: format2Pin, type: EgkFileSystem.Pin.mrpinHome)
             .flatMap { _ in
-                HCCTerminalTestCase.healthCard.sign(challenge: challenge)
+                CardSimulationTerminalTestCase.healthCard.sign(challenge: challenge)
             }
             .run(on: Executor.trampoline)
 
@@ -67,7 +67,7 @@ Encapsulate the [PACE protocol](https://www.bsi.bund.de/DE/Publikationen/Technis
 steps for establishing a secure channel with the Health Card and expose only a simple API call .
 
     try KeyAgreement.Algorithm.idPaceEcdhGmAesCbcCmac128.negotiateSessionKey(
-                    channel: HCCTerminalTestCase.healthCard.currentCardChannel,
+                    channel: CardSimulationTerminalTestCase.healthCard.currentCardChannel,
                     can: can,
                     writeTimeout: 0,
                     readTimeout: 10)
