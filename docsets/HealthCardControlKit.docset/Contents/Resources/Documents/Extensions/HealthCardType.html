@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HealthCardType Extension Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Extension/HealthCardType" class="dashAnchor"></a>
+    <a title="HealthCardType Extension Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">HealthCardControlKit Docs</a>
+          <span class="no-mobile"> (67% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/gematik/ref-HealthCardControlKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">HealthCardControlKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          HealthCardType Extension Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>HealthCardType</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">HealthCardType</span></code></pre>
+
+                  </div>
+                </div>
+              
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E18readAutCertificateAA10ExecutableCyAD0H8CertInfoO4info_10Foundation4DataV11certificatetGyF"></a>
+                      <a name="//apple_ref/swift/Method/readAutCertificate()" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E18readAutCertificateAA10ExecutableCyAD0H8CertInfoO4info_10Foundation4DataV11certificatetGyF">readAutCertificate()</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Read the MF/DF.ESIGN.EF.C.CH.AUT.[E256/R2048] certificate from the receiver</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">readAutCertificate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:20HealthCardControlKit22AutCertificateResponsea">AutCertificateResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>the certificate file and ESignInfo association to it</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E4sign9challengeAA10ExecutableCyAA0ab8ResponseE0_pG10Foundation4DataV_tF"></a>
+                      <a name="//apple_ref/swift/Method/sign(challenge:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E4sign9challengeAA10ExecutableCyAA0ab8ResponseE0_pG10Foundation4DataV_tF">sign(challenge:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Sign a challenge (for example a hash value) for authentication.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Only supports eGK Card types</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sign</span><span class="p">(</span><span class="nv">challenge</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="kt">HealthCardResponseType</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>challenge</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The data to be signed</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Executable that signs the given challenge on the card</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E6verify3pin4typeAA10ExecutableCyAD17VerifyPinResponseOGAA07Format2L0V_AA13EgkFileSystemV0L0OtF"></a>
+                      <a name="//apple_ref/swift/Method/verify(pin:type:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E6verify3pin4typeAA10ExecutableCyAD17VerifyPinResponseOGAA07Format2L0V_AA13EgkFileSystemV0L0OtF">verify(pin:type:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Verify Password for a Pin type</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Only supports eGK Card types</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">pin</span><span class="p">:</span> <span class="kt">Format2Pin</span><span class="p">,</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">EgkFileSystem</span><span class="o">.</span><span class="kt">Pin</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="kt"><a href="../Enums/VerifyPinResponse.html">VerifyPinResponse</a></span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>pin</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p><code>Format2Pin</code> holds the Pin information for the <code>type</code>. E.g. mrPinHome.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>type</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>verification type. Any of <code>EgkFileSystem.Pin</code>.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Executable that tries to verify the given <code>pin</code> information against <code>type</code></p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E16readSelectedFile8expected011failOnEndOfI7Warning6offsetAA10ExecutableCy10Foundation4DataVGSiSg_SbSitF"></a>
+                      <a name="//apple_ref/swift/Method/readSelectedFile(expected:failOnEndOfFileWarning:offset:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E16readSelectedFile8expected011failOnEndOfI7Warning6offsetAA10ExecutableCy10Foundation4DataVGSiSg_SbSitF">readSelectedFile(expected:failOnEndOfFileWarning:offset:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Read the current selected DF/EF File</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This executable keeps reading till the received number of bytes is <code>size</code>
+    or the channel returns 0x6282: endOfFileWarning.
+    When the current channel <code>maxResponseLength</code> is less than the expected <code>size</code>, the file is read in
+    chunks and returned as a whole.</p>
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>Emits <code><a href="../Enums/ReadError.html">ReadError</a></code> on the Executable in case of failure.</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">readSelectedFile</span><span class="p">(</span><span class="n">expected</span> <span class="nv">size</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?,</span> <span class="nv">failOnEndOfFileWarning</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">offset</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+                <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>size</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>The expected file size. must be greater than 0 or nil.
+    Note that failOnEndOfFileWarning must be <code>false</code> for this operation to succeed when <code>size</code> = nil.</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>failOnEndOfFileWarning</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>whether the operation must execute &lsquo;clean&rsquo; or till the end-of-file warning.
+    [default: true]</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Executable that reads the current selected file</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E15selectDedicated4file3fcp6lengthAA10ExecutableCyAA14ResponseStatusO_AA04FileF9ParameterVSgtGAA0hO0V_SbSitF"></a>
+                      <a name="//apple_ref/swift/Method/selectDedicated(file:fcp:length:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E15selectDedicated4file3fcp6lengthAA10ExecutableCyAA14ResponseStatusO_AA04FileF9ParameterVSgtGAA0hO0V_SbSitF">selectDedicated(file:fcp:length:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Select a dedicated file with or without requesting the FileIdentifier&rsquo;s File Control Parameter.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>emits <code><a href="../Enums/SelectError.html">SelectError</a></code> (or <code><a href="../Enums/ReadError.html">ReadError</a></code> is case no FCP data could be read and fcp = true)</p>
+
+</div>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">selectDedicated</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span> <span class="kt">DedicatedFile</span><span class="p">,</span> <span class="nv">fcp</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">length</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">256</span><span class="p">)</span>
+                <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">ResponseStatus</span><span class="p">,</span> <span class="kt">FileControlParameter</span><span class="p">?)</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                        <div>
+                          <h4>Parameters</h4>
+                          <table class="graybox">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>file</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>file to select</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>fcp</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>whether to request the File Control Parameter</p>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <code>
+                                  <em>length</em>
+                                  </code>
+                                </td>
+                                <td>
+                                  <div>
+                                    <p>expected fcp length - only applicable when fcp = true</p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div>
+                          <h4>Return Value</h4>
+                          <p>Executable chain that selects the given file when executed</p>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E30determineKeyAgreementAlgorithm12writeTimeout04readL0AA10ExecutableCyAD0hI0C0J0OGSd_SdtKF"></a>
+                      <a name="//apple_ref/swift/Method/determineKeyAgreementAlgorithm(writeTimeout:readTimeout:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E30determineKeyAgreementAlgorithm12writeTimeout04readL0AA10ExecutableCyAD0hI0C0J0OGSd_SdtKF">determineKeyAgreementAlgorithm(writeTimeout:readTimeout:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">determineKeyAgreementAlgorithm</span><span class="p">(</span><span class="nv">writeTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">readTimeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="k">throws</span>
+                <span class="o">-&gt;</span> <span class="kt">Executable</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/KeyAgreement.html">KeyAgreement</a></span><span class="o">.</span><span class="kt">Algorithm</span><span class="o">&gt;</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement.html">KeyAgreement</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Algorithm.html">– Algorithm</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction.html">KeyDerivationFunction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/KeyFuncType.html">– KeyFuncType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/Mode.html">– Mode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureCardChannel.html">SecureCardChannel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureHealthCard.html">SecureHealthCard</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/AutCertInfo.html">AutCertInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ECPoint.html">ECPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ECPoint/InvalidArgument.html">– InvalidArgument</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ReadError.html">ReadError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/SelectError.html">SelectError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/VerifyPinResponse.html">VerifyPinResponse</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/ASN1Kit.html">ASN1Kit</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/ASN1Kit/ObjectIdentifier.html">– ObjectIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/BigInt.html">BigInt</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardChannelType.html">CardChannelType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardType.html">CardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CommandType.html">CommandType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Data.html">Data</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCard.html">HealthCard</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCard/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCardPropertyType.html">HealthCardPropertyType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCardType.html">HealthCardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/ResponseStatus.html">ResponseStatus</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/SecureMessaging.html">SecureMessaging</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/EllipticCurve.html">EllipticCurve</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Typealiases.html">Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:20HealthCardControlKit22AutCertificateResponsea">AutCertificateResponse</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="http://www.gematik.de" target="_blank" rel="external">gematik GmbH</a>. All rights reserved. (Last updated: 2020-04-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ReadError Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, viewport-fit=cover, initial-scale=1.0" />
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/ReadError" class="dashAnchor"></a>
+    <a title="ReadError Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p>
+          <a href="../index.html">HealthCardControlKit Docs</a>
+          <span class="no-mobile"> (67% documented)</span>
+        </p>
+    
+        <p class="header-right">
+          <a href="https://github.com/gematik/ref-HealthCardControlKit">
+            <img src="../img/gh.png"/>
+            <span class="no-mobile">View on GitHub</span>
+          </a>
+        </p>
+    
+      </div>
+    </header>
+    <div id="breadcrumbs-container">
+      <div class="content-wrapper">
+        <p id="breadcrumbs">
+          <span class="no-mobile">
+            <a href="../index.html">HealthCardControlKit Reference</a>
+            <img id="carat" src="../img/carat.png" />
+          </span>
+          ReadError Enumeration Reference
+        </p>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="article-wrapper">
+        <article class="main-content">
+          <section>
+            <section class="section">
+              <h1>ReadError</h1>
+                <div class="declaration">
+                  <div class="language">
+                    <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ReadError</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                  </div>
+                </div>
+              <p>Domain error cases for Reading files from a <code>HealthCardType</code> e.g. <code>CardChannelType</code></p>
+
+            </section>
+            <section class="section task-group-section">
+              <div class="task-group">
+                <ul>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit9ReadErrorO18unexpectedResponseyAC0ab6AccessD00H6StatusO_tcACmF"></a>
+                      <a name="//apple_ref/swift/Element/unexpectedResponse(state:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit9ReadErrorO18unexpectedResponseyAC0ab6AccessD00H6StatusO_tcACmF">unexpectedResponse(state:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>The response status did not match the expected response status</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">unexpectedResponse</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">ResponseStatus</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit9ReadErrorO6noDatayAC0ab6AccessD014ResponseStatusO_tcACmF"></a>
+                      <a name="//apple_ref/swift/Element/noData(state:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit9ReadErrorO6noDatayAC0ab6AccessD014ResponseStatusO_tcACmF">noData(state:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>No data has been returned</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">noData</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">ResponseStatus</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit9ReadErrorO010fcpMissingE4SizeyAC0ab6AccessD014ResponseStatusO_tcACmF"></a>
+                      <a name="//apple_ref/swift/Element/fcpMissingReadSize(state:)" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit9ReadErrorO010fcpMissingE4SizeyAC0ab6AccessD014ResponseStatusO_tcACmF">fcpMissingReadSize(state:)</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">fcpMissingReadSize</span><span class="p">(</span><span class="nv">state</span><span class="p">:</span> <span class="kt">ResponseStatus</span><span class="p">)</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </section>
+        </article>
+      </div>
+      <div class="nav-wrapper">
+        <nav class="nav-bottom">
+          <ul class="nav-groups">
+            <li class="nav-group-name">
+              <a href="../Classes.html">Classes</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement.html">KeyAgreement</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyAgreement/Algorithm.html">– Algorithm</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction.html">KeyDerivationFunction</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/KeyFuncType.html">– KeyFuncType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/KeyDerivationFunction/Mode.html">– Mode</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureCardChannel.html">SecureCardChannel</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Classes/SecureHealthCard.html">SecureHealthCard</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Enums.html">Enumerations</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Enums/AutCertInfo.html">AutCertInfo</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ECPoint.html">ECPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ECPoint/InvalidArgument.html">– InvalidArgument</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/ReadError.html">ReadError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/SelectError.html">SelectError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Enums/VerifyPinResponse.html">VerifyPinResponse</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Extensions.html">Extensions</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Extensions/ASN1Kit.html">ASN1Kit</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/ASN1Kit/ObjectIdentifier.html">– ObjectIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/BigInt.html">BigInt</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardChannelType.html">CardChannelType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CardType.html">CardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/CommandType.html">CommandType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/Data.html">Data</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCard.html">HealthCard</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCard/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCardPropertyType.html">HealthCardPropertyType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/HealthCardType.html">HealthCardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Extensions/ResponseStatus.html">ResponseStatus</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Protocols.html">Protocols</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Protocols/SecureMessaging.html">SecureMessaging</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Structs.html">Structures</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Structs/EllipticCurve.html">EllipticCurve</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-group-name">
+              <a href="../Typealiases.html">Type Aliases</a>
+              <ul class="nav-group-tasks">
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:20HealthCardControlKit22AutCertificateResponsea">AutCertificateResponse</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="../Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-wrapper">
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="http://www.gematik.de" target="_blank" rel="external">gematik GmbH</a>. All rights reserved. (Last updated: 2020-04-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </div>
+    </div>
+  </body>
+</div>
+</html>

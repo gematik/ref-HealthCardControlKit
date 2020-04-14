@@ -17,11 +17,11 @@
       <div class="content-wrapper">
         <p>
           <a href="index.html">HealthCardControlKit Docs</a>
-          <span class="no-mobile"> (76% documented)</span>
+          <span class="no-mobile"> (67% documented)</span>
         </p>
     
         <p class="header-right">
-          <a href="https://build.top.local/source/git/refImpl/mobszen/iOS/ref-HealthCardControlKit">
+          <a href="https://github.com/gematik/ref-HealthCardControlKit">
             <img src="img/gh.png"/>
             <span class="no-mobile">View on GitHub</span>
           </a>
@@ -55,6 +55,71 @@
                   <li class="item">
                     <div>
                       <code>
+                      <a name="/s:20HealthCardControlKit11AutCertInfoO"></a>
+                      <a name="//apple_ref/swift/Enum/AutCertInfo" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit11AutCertInfoO">AutCertInfo</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>MF/DF.ESIGN.EF.C.CH.AUT type</p>
+
+                          <a href="Enums/AutCertInfo.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AutCertInfo</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit17VerifyPinResponseO"></a>
+                      <a name="//apple_ref/swift/Enum/VerifyPinResponse" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit17VerifyPinResponseO">VerifyPinResponse</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Response to a Verify Pin command on a HealthCard</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="Extensions/HealthCardType.html#/s:19HealthCardAccessKit0aB4TypeP0ab7ControlD0E6verify3pin4typeAA10ExecutableCyAD17VerifyPinResponseOGAA07Format2L0V_AA13EgkFileSystemV0L0OtF">HealthCardType.verify(pin:type:)</a></code>
+
+</div><ul>
+<li>success: when the pin verified as correct</li>
+<li>failed: when the pin was incorrect</li>
+</ul>
+
+                          <a href="Enums/VerifyPinResponse.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">VerifyPinResponse</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">VerifyPinResponse</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
                       <a name="/s:20HealthCardControlKit7ECPointO"></a>
                       <a name="//apple_ref/swift/Enum/ECPoint" class="dashAnchor"></a>
                       <a class="token" href="#/s:20HealthCardControlKit7ECPointO">ECPoint</a>
@@ -75,6 +140,63 @@ Can be .infinite or .finite(ECPointCoordinates), where <code><a href="Typealiase
                           <div class="language">
                             <p class="aside-title">Swift</p>
                             <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ECPoint</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ECPoint</span><span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit9ReadErrorO"></a>
+                      <a name="//apple_ref/swift/Enum/ReadError" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit9ReadErrorO">ReadError</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Domain error cases for Reading files from a <code>HealthCardType</code> e.g. <code>CardChannelType</code></p>
+
+                          <a href="Enums/ReadError.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ReadError</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
+
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                  </li>
+                  <li class="item">
+                    <div>
+                      <code>
+                      <a name="/s:20HealthCardControlKit11SelectErrorO"></a>
+                      <a name="//apple_ref/swift/Enum/SelectError" class="dashAnchor"></a>
+                      <a class="token" href="#/s:20HealthCardControlKit11SelectErrorO">SelectError</a>
+                      </code>
+                    </div>
+                    <div class="height-container">
+                      <div class="pointer-container"></div>
+                      <section class="section">
+                        <div class="pointer"></div>
+                        <div class="abstract">
+                          <p>Undocumented</p>
+
+                          <a href="Enums/SelectError.html" class="slightly-smaller">See more</a>
+                        </div>
+                        <div class="declaration">
+                          <h4>Declaration</h4>
+                          <div class="language">
+                            <p class="aside-title">Swift</p>
+                            <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">SelectError</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
 
                           </div>
                         </div>
@@ -123,7 +245,22 @@ Can be .infinite or .finite(ECPointCoordinates), where <code><a href="Typealiase
               <a href="Enums.html">Enumerations</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Enums/AutCertInfo.html">AutCertInfo</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Enums/ECPoint.html">ECPoint</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/ECPoint/InvalidArgument.html">– InvalidArgument</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/ReadError.html">ReadError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/SelectError.html">SelectError</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Enums/VerifyPinResponse.html">VerifyPinResponse</a>
                 </li>
               </ul>
             </li>
@@ -131,10 +268,40 @@ Can be .infinite or .finite(ECPointCoordinates), where <code><a href="Typealiase
               <a href="Extensions.html">Extensions</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Extensions/ASN1Kit.html">ASN1Kit</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/ASN1Kit/ObjectIdentifier.html">– ObjectIdentifier</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/BigInt.html">BigInt</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Extensions/CardChannelType.html">CardChannelType</a>
                 </li>
                 <li class="nav-group-task">
                   <a href="Extensions/CardType.html">CardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/CommandType.html">CommandType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/Data.html">Data</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/HealthCard.html">HealthCard</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/HealthCard/Error.html">– Error</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/HealthCardPropertyType.html">HealthCardPropertyType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/HealthCardType.html">HealthCardType</a>
+                </li>
+                <li class="nav-group-task">
+                  <a href="Extensions/ResponseStatus.html">ResponseStatus</a>
                 </li>
               </ul>
             </li>
@@ -158,6 +325,9 @@ Can be .infinite or .finite(ECPointCoordinates), where <code><a href="Typealiase
               <a href="Typealiases.html">Type Aliases</a>
               <ul class="nav-group-tasks">
                 <li class="nav-group-task">
+                  <a href="Typealiases.html#/s:20HealthCardControlKit22AutCertificateResponsea">AutCertificateResponse</a>
+                </li>
+                <li class="nav-group-task">
                   <a href="Typealiases.html#/s:20HealthCardControlKit18ECPointCoordinatesa">ECPointCoordinates</a>
                 </li>
               </ul>
@@ -167,8 +337,8 @@ Can be .infinite or .finite(ECPointCoordinates), where <code><a href="Typealiase
       </div>
       <div class="footer-wrapper">
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="http://www.gematik.de" target="_blank" rel="external">gematik GmbH</a>. All rights reserved. (Last updated: 2020-01-21)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="http://www.gematik.de" target="_blank" rel="external">gematik GmbH</a>. All rights reserved. (Last updated: 2020-04-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </div>
     </div>
